@@ -1,6 +1,6 @@
 {
-  "lastUpdate": "2026/4/18 15:41:23",
-  "count": 198,
+  "lastUpdate": "2026/4/18 16:00:38",
+  "count": 193,
   "sourceStats": [
     {
       "source": "本科生院",
@@ -27,15 +27,15 @@
       "total": 18
     },
     {
-      "source": "化学学院",
-      "competition": 0,
-      "activity": 17,
-      "total": 17
-    },
-    {
       "source": "外语学院",
       "competition": 1,
       "activity": 16,
+      "total": 17
+    },
+    {
+      "source": "化学学院",
+      "competition": 0,
+      "activity": 17,
       "total": 17
     },
     {
@@ -46,9 +46,9 @@
     },
     {
       "source": "信息管理学院",
-      "competition": 0,
+      "competition": 1,
       "activity": 15,
-      "total": 15
+      "total": 16
     },
     {
       "source": "政治与公共管理学院",
@@ -82,6 +82,12 @@
     },
     {
       "source": "生科学院",
+      "competition": 1,
+      "activity": 9,
+      "total": 10
+    },
+    {
+      "source": "生命科学学院(主站)",
       "competition": 1,
       "activity": 9,
       "total": 10
@@ -135,12 +141,6 @@
       "total": 6
     },
     {
-      "source": "生命科学学院(主站)",
-      "competition": 1,
-      "activity": 5,
-      "total": 6
-    },
-    {
       "source": "弘毅学堂",
       "competition": 0,
       "activity": 5,
@@ -165,16 +165,16 @@
       "total": 4
     },
     {
-      "source": "历史学院",
-      "competition": 2,
-      "activity": 2,
-      "total": 4
-    },
-    {
       "source": "动力与机械学院(主站)",
       "competition": 1,
       "activity": 3,
       "total": 4
+    },
+    {
+      "source": "历史学院",
+      "competition": 2,
+      "activity": 1,
+      "total": 3
     },
     {
       "source": "电子信息学院(主站)",
@@ -208,12 +208,6 @@
     },
     {
       "source": "水利水电学院",
-      "competition": 0,
-      "activity": 0,
-      "total": 0
-    },
-    {
-      "source": "电子信息学院",
       "competition": 0,
       "activity": 0,
       "total": 0
@@ -255,6 +249,12 @@
       "total": 0
     },
     {
+      "source": "电子信息学院",
+      "competition": 0,
+      "activity": 0,
+      "total": 0
+    },
+    {
       "source": "文学院(主站)",
       "competition": 0,
       "activity": 0,
@@ -275,16 +275,7 @@
       "category": "双创/经管",
       "type": "competition",
       "source": "生科学院",
-      "crawlTime": "2026-04-18T07:41:13.511Z"
-    },
-    {
-      "title": "电气与自动化学院2026年普通招考博士研究生（第二批次）报名通知",
-      "link": "https://eea.whu.edu.cn/info/1052/81781.htm",
-      "date": "近期",
-      "category": "数理/基础",
-      "type": "competition",
-      "source": "电气与自动化学院",
-      "crawlTime": "2026-04-18T07:41:15.536Z"
+      "crawlTime": "2026-04-18T08:00:27.581Z"
     },
     {
       "title": "2025年全国大学生测绘学科创新创业智能大赛湖北赛区竞赛开幕式在武汉大学举行",
@@ -293,7 +284,16 @@
       "category": "双创/经管",
       "type": "competition",
       "source": "测绘学院",
-      "crawlTime": "2026-04-18T07:41:15.666Z"
+      "crawlTime": "2026-04-18T08:00:29.415Z"
+    },
+    {
+      "title": "电气与自动化学院2026年普通招考博士研究生（第二批次）报名通知",
+      "link": "https://eea.whu.edu.cn/info/1052/81781.htm",
+      "date": "近期",
+      "category": "数理/基础",
+      "type": "competition",
+      "source": "电气与自动化学院",
+      "crawlTime": "2026-04-18T08:00:29.827Z"
     },
     {
       "title": "关于举办第三届“星湖杯”地图设计大赛的通知",
@@ -302,7 +302,7 @@
       "category": "设计/艺术",
       "type": "competition",
       "source": "资源与环境科学学院",
-      "crawlTime": "2026-04-18T07:41:15.788Z"
+      "crawlTime": "2026-04-18T08:00:29.954Z"
     },
     {
       "title": "武汉大学领导班子树立和践行正确政绩观学习教育读书班第六期暨结业式举行",
@@ -311,7 +311,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "武汉大学官网",
-      "crawlTime": "2026-04-18T07:41:15.897Z"
+      "crawlTime": "2026-04-18T08:00:30.299Z"
     },
     {
       "title": "李德仁院士作“民商融合，空天智能，航天强国”主题演讲",
@@ -320,7 +320,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "武汉大学官网",
-      "crawlTime": "2026-04-18T07:41:15.897Z"
+      "crawlTime": "2026-04-18T08:00:30.300Z"
     },
     {
       "title": "孙晋教授出席世界互联网大会亚太峰会并发布研究报告",
@@ -329,7 +329,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "武汉大学官网",
-      "crawlTime": "2026-04-18T07:41:15.897Z"
+      "crawlTime": "2026-04-18T08:00:30.300Z"
     },
     {
       "title": "珞珈讲坛第530讲预告",
@@ -338,7 +338,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "武汉大学官网",
-      "crawlTime": "2026-04-18T07:41:15.898Z"
+      "crawlTime": "2026-04-18T08:00:30.300Z"
     },
     {
       "title": "珞珈讲坛第529讲预告",
@@ -347,61 +347,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "武汉大学官网",
-      "crawlTime": "2026-04-18T07:41:15.898Z"
-    },
-    {
-      "title": "李德仁院士作“民商融合，空天智能，航天强国”主题演讲",
-      "link": "https://news.whu.edu.cn/info/1013/495027.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "武汉大学新闻网",
-      "crawlTime": "2026-04-18T07:41:15.977Z"
-    },
-    {
-      "title": "孙晋教授出席世界互联网大会亚太峰会并发布研究报告",
-      "link": "https://news.whu.edu.cn/info/1015/495077.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "武汉大学新闻网",
-      "crawlTime": "2026-04-18T07:41:15.977Z"
-    },
-    {
-      "title": "【珞珈讲坛】张培震院士分享公里级分辨率青藏高原现今构造变形研究",
-      "link": "https://news.whu.edu.cn/info/1015/494897.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "武汉大学新闻网",
-      "crawlTime": "2026-04-18T07:41:15.977Z"
-    },
-    {
-      "title": "【珞珈讲坛】顾逸东院士谈国家空间科学的发展",
-      "link": "https://news.whu.edu.cn/info/1015/494777.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "武汉大学新闻网",
-      "crawlTime": "2026-04-18T07:41:15.977Z"
-    },
-    {
-      "title": "武汉大学领导班子树立和践行正确政绩观学习教育读书班第六期暨结业式举行",
-      "link": "https://news.whu.edu.cn/info/2251/495107.htm",
-      "date": "近期",
-      "category": "活动/综合",
-      "type": "activity",
-      "source": "武汉大学新闻网",
-      "crawlTime": "2026-04-18T07:41:15.977Z"
-    },
-    {
-      "title": "【学习教育进行时】武汉大学领导班子树立和践行正确政绩观学习教育读书班第四期举办",
-      "link": "https://news.whu.edu.cn/info/2251/494747.htm",
-      "date": "近期",
-      "category": "活动/综合",
-      "type": "activity",
-      "source": "武汉大学新闻网",
-      "crawlTime": "2026-04-18T07:41:15.977Z"
+      "crawlTime": "2026-04-18T08:00:30.300Z"
     },
     {
       "title": "【长江论坛】南开大学张玉利教授应邀做客长江论坛",
@@ -410,7 +356,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "经管学院",
-      "crawlTime": "2026-04-18T07:41:16.110Z"
+      "crawlTime": "2026-04-18T08:00:30.764Z"
     },
     {
       "title": "汇聚师生智慧，共话发展蓝图 ——学院第六期“院领导接待学生日”活动顺利举办",
@@ -419,7 +365,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "经管学院",
-      "crawlTime": "2026-04-18T07:41:16.110Z"
+      "crawlTime": "2026-04-18T08:00:30.764Z"
     },
     {
       "title": "【珞珈经管创新论坛】香港城市大学王征：薪酬透明度与风险偏好：基于抵押贷款决策的经验证据",
@@ -428,7 +374,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "经管学院",
-      "crawlTime": "2026-04-18T07:41:16.110Z"
+      "crawlTime": "2026-04-18T08:00:30.764Z"
     },
     {
       "title": "【珞珈经管创新论坛】墨尔本大学Jing（Jill）Lei：The Impact of Socioeconomic Status (SES) on Patient Preference for Aggressive Treatment Options（社会经济地位对患者偏好激进治疗方案的影响）",
@@ -437,7 +383,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "经管学院",
-      "crawlTime": "2026-04-18T07:41:16.110Z"
+      "crawlTime": "2026-04-18T08:00:30.764Z"
     },
     {
       "title": "数智赋能启新程 知行合一绘蓝图——数字经济、国际商务专硕党支部开展学习两会精神主题党日活动",
@@ -446,7 +392,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "经管学院",
-      "crawlTime": "2026-04-18T07:41:16.111Z"
+      "crawlTime": "2026-04-18T08:00:30.764Z"
     },
     {
       "title": "武汉大学内蒙古招生组2026年寒假回访母校活动培训会暨出征仪式顺利举行",
@@ -455,79 +401,61 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "经管学院",
-      "crawlTime": "2026-04-18T07:41:16.111Z"
+      "crawlTime": "2026-04-18T08:00:30.764Z"
     },
     {
-      "title": "春风送暖，赛场竞彩｜遥感信息工程学院第二十四届师生春季运动会顺利举行",
-      "link": "https://rsgis.whu.edu.cn/info/1252/109760.htm",
+      "title": "李德仁院士作“民商融合，空天智能，航天强国”主题演讲",
+      "link": "https://news.whu.edu.cn/info/1013/495027.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "武汉大学新闻网",
+      "crawlTime": "2026-04-18T08:00:30.777Z"
+    },
+    {
+      "title": "孙晋教授出席世界互联网大会亚太峰会并发布研究报告",
+      "link": "https://news.whu.edu.cn/info/1015/495077.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "武汉大学新闻网",
+      "crawlTime": "2026-04-18T08:00:30.777Z"
+    },
+    {
+      "title": "【珞珈讲坛】张培震院士分享公里级分辨率青藏高原现今构造变形研究",
+      "link": "https://news.whu.edu.cn/info/1015/494897.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "武汉大学新闻网",
+      "crawlTime": "2026-04-18T08:00:30.777Z"
+    },
+    {
+      "title": "【珞珈讲坛】顾逸东院士谈国家空间科学的发展",
+      "link": "https://news.whu.edu.cn/info/1015/494777.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "武汉大学新闻网",
+      "crawlTime": "2026-04-18T08:00:30.777Z"
+    },
+    {
+      "title": "武汉大学领导班子树立和践行正确政绩观学习教育读书班第六期暨结业式举行",
+      "link": "https://news.whu.edu.cn/info/2251/495107.htm",
       "date": "近期",
       "category": "活动/综合",
       "type": "activity",
-      "source": "遥感学院",
-      "crawlTime": "2026-04-18T07:41:16.138Z"
+      "source": "武汉大学新闻网",
+      "crawlTime": "2026-04-18T08:00:30.777Z"
     },
     {
-      "title": "遥感信息工程学院第二十四届(2026年)师生春季运动会公告",
-      "link": "https://rsgis.whu.edu.cn/info/1083/109070.htm",
+      "title": "【学习教育进行时】武汉大学领导班子树立和践行正确政绩观学习教育读书班第四期举办",
+      "link": "https://news.whu.edu.cn/info/2251/494747.htm",
       "date": "近期",
       "category": "活动/综合",
       "type": "activity",
-      "source": "遥感学院",
-      "crawlTime": "2026-04-18T07:41:16.138Z"
-    },
-    {
-      "title": "11月26日讲座信息",
-      "link": "https://rsgis.whu.edu.cn/info/1053/107840.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "遥感学院",
-      "crawlTime": "2026-04-18T07:41:16.138Z"
-    },
-    {
-      "title": "9月30日讲座信息",
-      "link": "https://rsgis.whu.edu.cn/info/1053/106490.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "遥感学院",
-      "crawlTime": "2026-04-18T07:41:16.138Z"
-    },
-    {
-      "title": "日本东京大学柴崎亮介教授来院开展学术讲座",
-      "link": "https://rsgis.whu.edu.cn/info/1055/106300.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "遥感学院",
-      "crawlTime": "2026-04-18T07:41:16.138Z"
-    },
-    {
-      "title": "9月18日讲座信息",
-      "link": "https://rsgis.whu.edu.cn/info/1053/106160.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "遥感学院",
-      "crawlTime": "2026-04-18T07:41:16.138Z"
-    },
-    {
-      "title": "​学院举办《雷锋日记》主题知卓读书会",
-      "link": "https://rsgis.whu.edu.cn/info/1080/109450.htm",
-      "date": "近期",
-      "category": "活动/综合",
-      "type": "activity",
-      "source": "遥感学院",
-      "crawlTime": "2026-04-18T07:41:16.138Z"
-    },
-    {
-      "title": "武汉大学土木建筑工程学院2026年招收攻读博士学位研究生报名通知 (第二批次普通招考)",
-      "link": "https://civ.whu.edu.cn/info/1188/70921.htm",
-      "date": "近期",
-      "category": "设计/艺术",
-      "type": "competition",
-      "source": "土木建筑工程学院",
-      "crawlTime": "2026-04-18T07:41:16.208Z"
+      "source": "武汉大学新闻网",
+      "crawlTime": "2026-04-18T08:00:30.777Z"
     },
     {
       "title": "2026年4月16日学术报告信息",
@@ -536,7 +464,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "生科学院",
-      "crawlTime": "2026-04-18T07:41:16.215Z"
+      "crawlTime": "2026-04-18T08:00:30.870Z"
     },
     {
       "title": "2026年4月8日学术报告信息",
@@ -545,7 +473,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "生科学院",
-      "crawlTime": "2026-04-18T07:41:16.215Z"
+      "crawlTime": "2026-04-18T08:00:30.870Z"
     },
     {
       "title": "2026年4月7日学术报告信息",
@@ -554,268 +482,70 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "生科学院",
-      "crawlTime": "2026-04-18T07:41:16.215Z"
+      "crawlTime": "2026-04-18T08:00:30.870Z"
     },
     {
-      "title": "数智赋能教学创新：实践路径与能力提升工作坊（第1期） 成功举办",
-      "link": "https://chem.whu.edu.cn/info/1312/68651.htm",
+      "title": "春风送暖，赛场竞彩｜遥感信息工程学院第二十四届师生春季运动会顺利举行",
+      "link": "https://rsgis.whu.edu.cn/info/1252/109760.htm",
       "date": "近期",
       "category": "活动/综合",
       "type": "activity",
-      "source": "化学学院",
-      "crawlTime": "2026-04-18T07:41:16.334Z"
+      "source": "遥感学院",
+      "crawlTime": "2026-04-18T08:00:30.877Z"
     },
     {
-      "title": "学院首次开展“种子计划”入选学生本科毕业论文开题报告",
-      "link": "https://chem.whu.edu.cn/info/1312/68551.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "化学学院",
-      "crawlTime": "2026-04-18T07:41:16.334Z"
-    },
-    {
-      "title": "武汉大学第八届“有机化学论坛”成功举办",
-      "link": "https://chem.whu.edu.cn/info/1312/68461.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "化学学院",
-      "crawlTime": "2026-04-18T07:41:16.334Z"
-    },
-    {
-      "title": "关于开展化学与分子科学学院“课题组开放日”活动的通知",
-      "link": "https://chem.whu.edu.cn/info/1860/68851.htm",
+      "title": "遥感信息工程学院第二十四届(2026年)师生春季运动会公告",
+      "link": "https://rsgis.whu.edu.cn/info/1083/109070.htm",
       "date": "近期",
       "category": "活动/综合",
       "type": "activity",
-      "source": "化学学院",
-      "crawlTime": "2026-04-18T07:41:16.335Z"
+      "source": "遥感学院",
+      "crawlTime": "2026-04-18T08:00:30.877Z"
     },
     {
-      "title": "关于举办“问道课堂”教学赋能活动（第二期）的通知",
-      "link": "https://chem.whu.edu.cn/info/1862/68221.htm",
+      "title": "11月26日讲座信息",
+      "link": "https://rsgis.whu.edu.cn/info/1053/107840.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "遥感学院",
+      "crawlTime": "2026-04-18T08:00:30.877Z"
+    },
+    {
+      "title": "9月30日讲座信息",
+      "link": "https://rsgis.whu.edu.cn/info/1053/106490.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "遥感学院",
+      "crawlTime": "2026-04-18T08:00:30.877Z"
+    },
+    {
+      "title": "日本东京大学柴崎亮介教授来院开展学术讲座",
+      "link": "https://rsgis.whu.edu.cn/info/1055/106300.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "遥感学院",
+      "crawlTime": "2026-04-18T08:00:30.877Z"
+    },
+    {
+      "title": "9月18日讲座信息",
+      "link": "https://rsgis.whu.edu.cn/info/1053/106160.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "遥感学院",
+      "crawlTime": "2026-04-18T08:00:30.877Z"
+    },
+    {
+      "title": "​学院举办《雷锋日记》主题知卓读书会",
+      "link": "https://rsgis.whu.edu.cn/info/1080/109450.htm",
       "date": "近期",
       "category": "活动/综合",
       "type": "activity",
-      "source": "化学学院",
-      "crawlTime": "2026-04-18T07:41:16.335Z"
-    },
-    {
-      "title": "前沿讲座：2026年中印分子科学前沿与可持续发展国际研讨会（2026年4月19日（周日）上午8:45-11:50;下午14:00-18:30,电化学楼C512会议室）",
-      "link": "https://chem.whu.edu.cn/info/1277/68951.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "化学学院",
-      "crawlTime": "2026-04-18T07:41:16.335Z"
-    },
-    {
-      "title": "弘毅化学论坛：鲁统部教授学术报告（2026年4月7日（周二）8:30，电化学楼C512会议室）",
-      "link": "https://chem.whu.edu.cn/info/1277/68611.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "化学学院",
-      "crawlTime": "2026-04-18T07:41:16.335Z"
-    },
-    {
-      "title": "弘毅化学论坛：乐晓春院士、李杏放院士学术报告（2026年3月30日（周一）9:30）",
-      "link": "https://chem.whu.edu.cn/info/1277/68511.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "化学学院",
-      "crawlTime": "2026-04-18T07:41:16.335Z"
-    },
-    {
-      "title": "化学鲲鹏学术沙龙：张伟教授学术报告（2026年3月30日（周一）14:00，文理学部教五201）",
-      "link": "https://chem.whu.edu.cn/info/1277/68501.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "化学学院",
-      "crawlTime": "2026-04-18T07:41:16.335Z"
-    },
-    {
-      "title": "武汉大学第八届“有机化学论坛”成功举办",
-      "link": "https://chem.whu.edu.cn/info/1277/68471.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "化学学院",
-      "crawlTime": "2026-04-18T07:41:16.335Z"
-    },
-    {
-      "title": "前沿讲座：李景虹院士学术报告（2026年3月20日（周五）10:30，电化学楼C512会议室）",
-      "link": "https://chem.whu.edu.cn/info/1277/68291.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "化学学院",
-      "crawlTime": "2026-04-18T07:41:16.335Z"
-    },
-    {
-      "title": "弘毅化学论坛：Andrew G. Ewing教授学术报告（2026年3月20日（周五）下午 15:30-17:30，C512）",
-      "link": "https://chem.whu.edu.cn/info/1277/68281.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "化学学院",
-      "crawlTime": "2026-04-18T07:41:16.335Z"
-    },
-    {
-      "title": "前沿讲座：武汉大学第八届有机化学论坛（2026年3月21日(周六), 创隆厅）",
-      "link": "https://chem.whu.edu.cn/info/1277/68261.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "化学学院",
-      "crawlTime": "2026-04-18T07:41:16.335Z"
-    },
-    {
-      "title": "关于开展化学与分子科学学院“课题组开放日”活动的通知",
-      "link": "https://chem.whu.edu.cn/info/1581/68831.htm",
-      "date": "近期",
-      "category": "活动/综合",
-      "type": "activity",
-      "source": "化学学院",
-      "crawlTime": "2026-04-18T07:41:16.335Z"
-    },
-    {
-      "title": "关于开展化学与分子科学学院“课题组开放日”活动的通知",
-      "link": "https://chem.whu.edu.cn/info/1889/68861.htm",
-      "date": "近期",
-      "category": "活动/综合",
-      "type": "activity",
-      "source": "化学学院",
-      "crawlTime": "2026-04-18T07:41:16.335Z"
-    },
-    {
-      "title": "关于组织开展化学与分子科学学院2026年学生寒期社会实践活动的通知",
-      "link": "https://chem.whu.edu.cn/info/1889/67271.htm",
-      "date": "近期",
-      "category": "活动/综合",
-      "type": "activity",
-      "source": "化学学院",
-      "crawlTime": "2026-04-18T07:41:16.335Z"
-    },
-    {
-      "title": "武汉大学化学与分子科学学院华中地区高校优秀大学生研学营活动通知",
-      "link": "https://chem.whu.edu.cn/info/1741/56981.htm",
-      "date": "近期",
-      "category": "活动/综合",
-      "type": "activity",
-      "source": "化学学院",
-      "crawlTime": "2026-04-18T07:41:16.336Z"
-    },
-    {
-      "title": "弘毅学堂第61期弘毅学术论坛成功举办 聚焦科研成果清晰传播",
-      "link": "https://hyxt.whu.edu.cn/info/1361/25881.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "弘毅学堂",
-      "crawlTime": "2026-04-18T07:41:16.345Z"
-    },
-    {
-      "title": "学术交流 | 弘毅学堂第61期弘毅学术论坛成功举办 聚焦科研成果清晰传播",
-      "link": "https://hyxt.whu.edu.cn/info/1381/26041.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "弘毅学堂",
-      "crawlTime": "2026-04-18T07:41:16.346Z"
-    },
-    {
-      "title": "弘毅学堂第61期弘毅学术论坛成功举办 聚焦科研成果清晰传播",
-      "link": "https://hyxt.whu.edu.cn/info/1301/25871.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "弘毅学堂",
-      "crawlTime": "2026-04-18T07:41:16.346Z"
-    },
-    {
-      "title": "弘毅学堂第六届国际交流月活动顺利举行",
-      "link": "https://hyxt.whu.edu.cn/info/1301/23081.htm",
-      "date": "近期",
-      "category": "活动/综合",
-      "type": "activity",
-      "source": "弘毅学堂",
-      "crawlTime": "2026-04-18T07:41:16.346Z"
-    },
-    {
-      "title": "【坚白学术论坛】加州理工学院翟秋实博士后应邀来我院做学术报告 12月31日下午，“坚白”学术论坛（2024年第7期）在测绘学院218会议室成功举办。应李江涛研究员邀请，加州理工学院翟秋实博士后为我院师生带来了一场题为“光纤地震学的研究与展望——以地震、冰震、月震为例”的精彩学术报告。此次论坛由李江涛研究员主持。翟秋实博士后在其报告中首先介绍了分布式光纤声波传感（DAS）技术。作为一项新兴的地震观测技术，DAS能够以较低的成本将现有的光纤转化为密集的地震观测台阵。近年来，DAS技术在陆地、...",
-      "link": "https://main.sgg.whu.edu.cn/info/1367/40131.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "测绘学院",
-      "crawlTime": "2026-04-18T07:41:16.463Z"
-    },
-    {
-      "title": "【学术交流】具身智能导航学术沙龙",
-      "link": "https://main.sgg.whu.edu.cn/info/1367/45131.htm",
-      "date": "近期",
-      "category": "活动/综合",
-      "type": "activity",
-      "source": "测绘学院",
-      "crawlTime": "2026-04-18T07:41:16.463Z"
-    },
-    {
-      "title": "“坚白”高端论坛",
-      "link": "https://main.sgg.whu.edu.cn/info/1367/43211.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "测绘学院",
-      "crawlTime": "2026-04-18T07:41:16.463Z"
-    },
-    {
-      "title": "“坚白”学术论坛（2025年第4期）",
-      "link": "https://main.sgg.whu.edu.cn/info/1367/43001.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "测绘学院",
-      "crawlTime": "2026-04-18T07:41:16.463Z"
-    },
-    {
-      "title": "“坚白”高端论坛（2025年第8期）",
-      "link": "https://main.sgg.whu.edu.cn/info/1367/42871.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "测绘学院",
-      "crawlTime": "2026-04-18T07:41:16.463Z"
-    },
-    {
-      "title": "“坚白”高端论坛（2025年第7期）",
-      "link": "https://main.sgg.whu.edu.cn/info/1367/42621.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "测绘学院",
-      "crawlTime": "2026-04-18T07:41:16.463Z"
-    },
-    {
-      "title": "“坚白”高端论坛（2025年第6期）",
-      "link": "https://main.sgg.whu.edu.cn/info/1367/42461.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "测绘学院",
-      "crawlTime": "2026-04-18T07:41:16.463Z"
-    },
-    {
-      "title": "“坚白”高端论坛（2025年第5期）",
-      "link": "https://main.sgg.whu.edu.cn/info/1367/41881.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "测绘学院",
-      "crawlTime": "2026-04-18T07:41:16.463Z"
+      "source": "遥感学院",
+      "crawlTime": "2026-04-18T08:00:30.877Z"
     },
     {
       "title": "中俄青年共庆中俄建交75周年——武汉大学举办“荆楚遇见喀山”中俄青年交流营活动",
@@ -824,7 +554,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "外语学院",
-      "crawlTime": "2026-04-18T07:41:16.468Z"
+      "crawlTime": "2026-04-18T08:00:31.012Z"
     },
     {
       "title": "心怀口译梦 初识职业路 ——翻译系本科创新创业课程《口译实训与社会服务》系列讲座",
@@ -833,7 +563,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "外语学院",
-      "crawlTime": "2026-04-18T07:41:16.468Z"
+      "crawlTime": "2026-04-18T08:00:31.012Z"
     },
     {
       "title": "年薪60万起！武汉大学专项招募人文社科优秀青年学者",
@@ -842,7 +572,7 @@
       "category": "活动/社团",
       "type": "activity",
       "source": "外语学院",
-      "crawlTime": "2026-04-18T07:41:16.468Z"
+      "crawlTime": "2026-04-18T08:00:31.012Z"
     },
     {
       "title": "复旦大学桑德罗·荣格教授应邀做客长江论坛 （通讯员 陈艳）4月15日上午，由人文社会科学研究院和外国语言文学学院共同承办的武汉大学长江论坛第241讲成功举办，此次特邀复旦大学桑德罗·荣格教授在外国语言文学学院4016会议室为我校师生开展讲座，主题为“连环故事：托马斯·斯托瑟德为《皇家袖珍日程簿》（1805）绘制《韦克菲尔德牧师》插图”。该讲座由外国语言文学学院院长李圣杰教授主持，国际教育学院院长王爱菊教授、我院英语系主任张国庆教授、翻译系主任熊伟教授、俄语系主任郑文东教授、...",
@@ -851,7 +581,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "外语学院",
-      "crawlTime": "2026-04-18T07:41:16.468Z"
+      "crawlTime": "2026-04-18T08:00:31.012Z"
     },
     {
       "title": "上海外国语大学杨四平教授应邀为我院师生开展讲座04-07",
@@ -860,7 +590,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "外语学院",
-      "crawlTime": "2026-04-18T07:41:16.468Z"
+      "crawlTime": "2026-04-18T08:00:31.012Z"
     },
     {
       "title": "上海外国语大学谢建文教授应邀为我院师生开展讲座04-07",
@@ -869,7 +599,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "外语学院",
-      "crawlTime": "2026-04-18T07:41:16.468Z"
+      "crawlTime": "2026-04-18T08:00:31.012Z"
     },
     {
       "title": "香港理工大学李少峰教授应邀为我院师生开展学术讲座04-02",
@@ -878,7 +608,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "外语学院",
-      "crawlTime": "2026-04-18T07:41:16.468Z"
+      "crawlTime": "2026-04-18T08:00:31.012Z"
     },
     {
       "title": "北京师范大学马思劢教授应邀为我院师生开展讲座03-26",
@@ -887,7 +617,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "外语学院",
-      "crawlTime": "2026-04-18T07:41:16.468Z"
+      "crawlTime": "2026-04-18T08:00:31.012Z"
     },
     {
       "title": "加拿大劳里埃大学Tobias Krettenauer教授应邀在我院开展心理学系列讲座03-26",
@@ -896,7 +626,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "外语学院",
-      "crawlTime": "2026-04-18T07:41:16.469Z"
+      "crawlTime": "2026-04-18T08:00:31.012Z"
     },
     {
       "title": "东南大学王启龙教授应邀做客长江论坛03-24",
@@ -905,7 +635,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "外语学院",
-      "crawlTime": "2026-04-18T07:41:16.469Z"
+      "crawlTime": "2026-04-18T08:00:31.012Z"
     },
     {
       "title": "喜报！我院学子在“外教社杯”第十七届全国高校法语演讲比赛总决赛中获得佳绩11-10",
@@ -914,7 +644,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "外语学院",
-      "crawlTime": "2026-04-18T07:41:16.469Z"
+      "crawlTime": "2026-04-18T08:00:31.012Z"
     },
     {
       "title": "本次讲座将结合诗歌朗读，围绕诗集Lunar Inheritance的创作展开，探讨华裔澳大利亚家族记忆、跨文化身份与诗歌形式之间的关系。讲座将从诗人祖母遗物整理、家庭继承经验及中国城市化印象出发，分析诗人如何通过十四行诗等形式，将个人家族叙事与当代中国城市景观交织，呈现第三代华裔澳大利亚人复杂而多层的文化经验与诗性表达。",
@@ -923,7 +653,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "外语学院",
-      "crawlTime": "2026-04-18T07:41:16.469Z"
+      "crawlTime": "2026-04-18T08:00:31.013Z"
     },
     {
       "title": "元诗，特指现代性意义上的“以诗论诗”的、格“诗”致知的探索诗。它视诗为信仰，通过写诗、论诗，建构起诗与诗、诗与宇宙秩序之间现代性和真理性兼具的诗性联系。本讲座分“何为元诗？”“元诗为何？”“元诗何处？”“元诗何为？”“元诗怎样？”五大板块，从比较诗学的角度，依次讲述中外元诗的界定、旨归、处境、技法和价值，并回应“何为诗？”“何为好诗？”以及“如何写诗？”“如何写好诗？”之类的当下社会的诗学关切。",
@@ -932,7 +662,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "外语学院",
-      "crawlTime": "2026-04-18T07:41:16.469Z"
+      "crawlTime": "2026-04-18T08:00:31.013Z"
     },
     {
       "title": "杜尔斯·格林拜恩主要还是作为诗人在转折期建立起声誉。他是“当代德语文学中最重要的诗人之一”。其诗作前追德语诗歌传统，但又对实验创新开放；既避开了政治诗的政治教条，又与种种意识形态和世界改造吁求拉开了距离。它们采用现实主题，精微地描述现代社会的氛围格局。在《颅底课》中，解剖学和生理学等自然科学知识，一方面被“作为对象来处理”，也就是用作主题；另一方面也“起着多层次隐喻的作用”。但这其间，科学的话语主要还是被处理为“对现实的理解透视膜”，是一种视角和途径。相关概念和方案的借用，也只是被用作形象的活动布景，意在打开语义空间。在格林拜恩解剖学等自然科学知识和想象的偏爱背后，恰恰隐藏着他从美学上把握人类处境的基本兴趣。",
@@ -941,7 +671,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "外语学院",
-      "crawlTime": "2026-04-18T07:41:16.469Z"
+      "crawlTime": "2026-04-18T08:00:31.013Z"
     },
     {
       "title": "该讲座将探讨实证研究中任务型语言教学项目或课程的实施层面，包括需求分析、教学大纲设计、任务开发、任务排序和评估。然后讨论这其在多大程度上与任务型语言教学的原则和研究结果相一致。还将介绍比较研究中关于任务型语言教学对学习成效影响的研究结果。最后探讨AI时代任务型语言教学实施的实际意义，并提出一个任务型语言教学宏观评估框架。",
@@ -950,205 +680,205 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "外语学院",
-      "crawlTime": "2026-04-18T07:41:16.469Z"
+      "crawlTime": "2026-04-18T08:00:31.013Z"
     },
     {
-      "title": "学院赴江苏省通州高级中学开展招生宣传活动",
-      "link": "https://pmc.whu.edu.cn/info/1088/169351.htm",
+      "title": "弘毅学堂第61期弘毅学术论坛成功举办 聚焦科研成果清晰传播",
+      "link": "https://hyxt.whu.edu.cn/info/1361/25881.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "弘毅学堂",
+      "crawlTime": "2026-04-18T08:00:31.197Z"
+    },
+    {
+      "title": "学术交流 | 弘毅学堂第61期弘毅学术论坛成功举办 聚焦科研成果清晰传播",
+      "link": "https://hyxt.whu.edu.cn/info/1381/26041.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "弘毅学堂",
+      "crawlTime": "2026-04-18T08:00:31.197Z"
+    },
+    {
+      "title": "弘毅学堂第61期弘毅学术论坛成功举办 聚焦科研成果清晰传播",
+      "link": "https://hyxt.whu.edu.cn/info/1301/25871.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "弘毅学堂",
+      "crawlTime": "2026-04-18T08:00:31.197Z"
+    },
+    {
+      "title": "弘毅学堂第六届国际交流月活动顺利举行",
+      "link": "https://hyxt.whu.edu.cn/info/1301/23081.htm",
       "date": "近期",
       "category": "活动/综合",
       "type": "activity",
-      "source": "动力与机械学院",
-      "crawlTime": "2026-04-18T07:41:16.473Z"
+      "source": "弘毅学堂",
+      "crawlTime": "2026-04-18T08:00:31.197Z"
     },
     {
-      "title": "武汉大学承办长江水环境科技创新发展论坛",
-      "link": "https://sres.whu.edu.cn/info/3761/337071.htm",
+      "title": "武汉大学土木建筑工程学院2026年招收攻读博士学位研究生报名通知 (第二批次普通招考)",
+      "link": "https://civ.whu.edu.cn/info/1188/70921.htm",
       "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "资源与环境科学学院",
-      "crawlTime": "2026-04-18T07:41:16.535Z"
+      "category": "设计/艺术",
+      "type": "competition",
+      "source": "土木建筑工程学院",
+      "crawlTime": "2026-04-18T08:00:31.271Z"
     },
     {
-      "title": "党建引领绘蓝图，三校同心守沃野 | 华中三校师生党支部共建暨“环语菁英”论坛（第6期）顺利举行",
-      "link": "https://sres.whu.edu.cn/info/3761/340921.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "资源与环境科学学院",
-      "crawlTime": "2026-04-18T07:41:16.535Z"
-    },
-    {
-      "title": "探访都市环保，共话生态文明 | 校企支部共建暨环语菁英论坛（第4期）顺利举行",
-      "link": "https://sres.whu.edu.cn/info/3761/340251.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "资源与环境科学学院",
-      "crawlTime": "2026-04-18T07:41:16.535Z"
-    },
-    {
-      "title": "【地球系统科学讲坛】第一讲：大气成分智能遥感监测及其环境健康效应",
-      "link": "https://sres.whu.edu.cn/info/3331/340911.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "资源与环境科学学院",
-      "crawlTime": "2026-04-18T07:41:16.535Z"
-    },
-    {
-      "title": "【学术讲座】12月22日下午 福州大学 陈佐旗 副研究员 空天夜光遥感数据处理与多尺度城乡问题研究",
-      "link": "https://sres.whu.edu.cn/info/3331/338211.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "资源与环境科学学院",
-      "crawlTime": "2026-04-18T07:41:16.535Z"
-    },
-    {
-      "title": "科技赋能，生态治水——共探生态水文创新前沿暨行业前沿讲座",
-      "link": "https://sres.whu.edu.cn/info/3331/338151.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "资源与环境科学学院",
-      "crawlTime": "2026-04-18T07:41:16.535Z"
-    },
-    {
-      "title": "【学术报告】12月13日上午11:00-12:00 中科院地理所 苏奋振研究员 世界大变局与地理学",
-      "link": "https://sres.whu.edu.cn/info/3331/337871.htm",
-      "date": "近期",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "资源与环境科学学院",
-      "crawlTime": "2026-04-18T07:41:16.535Z"
-    },
-    {
-      "title": "电气与自动化学院党委举办树立和践行正确政绩观学习教育读书班暨党建工作专题研讨会",
-      "link": "https://eea.whu.edu.cn/info/1051/81831.htm",
+      "title": "数智赋能教学创新：实践路径与能力提升工作坊（第1期） 成功举办",
+      "link": "https://chem.whu.edu.cn/info/1312/68651.htm",
       "date": "近期",
       "category": "活动/综合",
       "type": "activity",
-      "source": "电气与自动化学院",
-      "crawlTime": "2026-04-18T07:41:16.633Z"
+      "source": "化学学院",
+      "crawlTime": "2026-04-18T08:00:31.311Z"
     },
     {
-      "title": "关于召开中国电工技术学会等离子体及应用专业委员会前沿交叉论坛第十五期“等离子体和能源转化-固氮与合成氨（2026）”的通知",
-      "link": "https://eea.whu.edu.cn/info/1052/81891.htm",
+      "title": "学院首次开展“种子计划”入选学生本科毕业论文开题报告",
+      "link": "https://chem.whu.edu.cn/info/1312/68551.htm",
       "date": "近期",
       "category": "活动/学术",
       "type": "activity",
-      "source": "电气与自动化学院",
-      "crawlTime": "2026-04-18T07:41:16.633Z"
+      "source": "化学学院",
+      "crawlTime": "2026-04-18T08:00:31.311Z"
     },
     {
-      "title": "【\"珞珈论电\"国际同行】系列讲座（第4—6期）顺利举行",
-      "link": "https://eea.whu.edu.cn/info/1285/81741.htm",
+      "title": "武汉大学第八届“有机化学论坛”成功举办",
+      "link": "https://chem.whu.edu.cn/info/1312/68461.htm",
       "date": "近期",
       "category": "活动/学术",
       "type": "activity",
-      "source": "电气与自动化学院",
-      "crawlTime": "2026-04-18T07:41:16.633Z"
+      "source": "化学学院",
+      "crawlTime": "2026-04-18T08:00:31.311Z"
     },
     {
-      "title": "俄罗斯脉冲功率专家Vladimir Efanov博士来访并作学术报告",
-      "link": "https://eea.whu.edu.cn/info/1285/81231.htm",
+      "title": "关于开展化学与分子科学学院“课题组开放日”活动的通知",
+      "link": "https://chem.whu.edu.cn/info/1860/68851.htm",
+      "date": "近期",
+      "category": "活动/综合",
+      "type": "activity",
+      "source": "化学学院",
+      "crawlTime": "2026-04-18T08:00:31.311Z"
+    },
+    {
+      "title": "关于举办“问道课堂”教学赋能活动（第二期）的通知",
+      "link": "https://chem.whu.edu.cn/info/1862/68221.htm",
+      "date": "近期",
+      "category": "活动/综合",
+      "type": "activity",
+      "source": "化学学院",
+      "crawlTime": "2026-04-18T08:00:31.311Z"
+    },
+    {
+      "title": "前沿讲座：2026年中印分子科学前沿与可持续发展国际研讨会（2026年4月19日（周日）上午8:45-11:50;下午14:00-18:30,电化学楼C512会议室）",
+      "link": "https://chem.whu.edu.cn/info/1277/68951.htm",
       "date": "近期",
       "category": "活动/学术",
       "type": "activity",
-      "source": "电气与自动化学院",
-      "crawlTime": "2026-04-18T07:41:16.633Z"
+      "source": "化学学院",
+      "crawlTime": "2026-04-18T08:00:31.311Z"
     },
     {
-      "title": "促进志愿服务常态化 续写雷锋精神新故事 ——电气与自动化学院团委小亭志愿服务中心",
-      "link": "https://eea.whu.edu.cn/info/1361/11213.htm",
-      "date": "近期",
-      "category": "活动/社团",
-      "type": "activity",
-      "source": "电气与自动化学院",
-      "crawlTime": "2026-04-18T07:41:16.634Z"
-    },
-    {
-      "title": "秦光照教授学术报告",
-      "link": "https://civ.whu.edu.cn/info/1189/67751.htm",
+      "title": "弘毅化学论坛：鲁统部教授学术报告（2026年4月7日（周二）8:30，电化学楼C512会议室）",
+      "link": "https://chem.whu.edu.cn/info/1277/68611.htm",
       "date": "近期",
       "category": "活动/学术",
       "type": "activity",
-      "source": "土木建筑工程学院",
-      "crawlTime": "2026-04-18T07:41:16.640Z"
+      "source": "化学学院",
+      "crawlTime": "2026-04-18T08:00:31.311Z"
     },
     {
-      "title": "Jian Zuo教授学术报告",
-      "link": "https://civ.whu.edu.cn/info/1189/67701.htm",
+      "title": "弘毅化学论坛：乐晓春院士、李杏放院士学术报告（2026年3月30日（周一）9:30）",
+      "link": "https://chem.whu.edu.cn/info/1277/68511.htm",
       "date": "近期",
       "category": "活动/学术",
       "type": "activity",
-      "source": "土木建筑工程学院",
-      "crawlTime": "2026-04-18T07:41:16.640Z"
+      "source": "化学学院",
+      "crawlTime": "2026-04-18T08:00:31.311Z"
     },
     {
-      "title": "刘灏研究员学术报告",
-      "link": "https://civ.whu.edu.cn/info/1189/67671.htm",
+      "title": "化学鲲鹏学术沙龙：张伟教授学术报告（2026年3月30日（周一）14:00，文理学部教五201）",
+      "link": "https://chem.whu.edu.cn/info/1277/68501.htm",
       "date": "近期",
       "category": "活动/学术",
       "type": "activity",
-      "source": "土木建筑工程学院",
-      "crawlTime": "2026-04-18T07:41:16.640Z"
+      "source": "化学学院",
+      "crawlTime": "2026-04-18T08:00:31.311Z"
     },
     {
-      "title": "贸通天下展风采，商海实战砺英才 ——2026年“天壕·珞珈梧桐杯”武汉大学国际贸易业务模拟大赛暨2026年全国高校商业精英挑战赛国际贸易竞赛国际贸易业务模拟赛道武汉大学选拔赛成功举办",
-      "link": "https://ems.whu.edu.cn/info/1587/297551.htm",
+      "title": "武汉大学第八届“有机化学论坛”成功举办",
+      "link": "https://chem.whu.edu.cn/info/1277/68471.htm",
       "date": "近期",
-      "category": "双创/经管",
-      "type": "competition",
-      "source": "经济与管理学院",
-      "crawlTime": "2026-04-18T07:41:16.768Z"
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "化学学院",
+      "crawlTime": "2026-04-18T08:00:31.311Z"
     },
     {
-      "title": "凝心聚力 迎“篮”而上——我院教职工男子篮球队征战第四届“冠军杯”联赛",
-      "link": "https://ems.whu.edu.cn/info/1587/296581.htm",
+      "title": "前沿讲座：李景虹院士学术报告（2026年3月20日（周五）10:30，电化学楼C512会议室）",
+      "link": "https://chem.whu.edu.cn/info/1277/68291.htm",
       "date": "近期",
-      "category": "综合",
-      "type": "competition",
-      "source": "经济与管理学院",
-      "crawlTime": "2026-04-18T07:41:16.768Z"
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "化学学院",
+      "crawlTime": "2026-04-18T08:00:31.311Z"
     },
     {
-      "title": "会计笃行凝灼见，实战争锋耀韶华——2026年全国高校商业精英挑战赛会计与商业管理案例竞赛武汉大学选拔赛成功举办",
-      "link": "https://ems.whu.edu.cn/info/1587/295671.htm",
+      "title": "弘毅化学论坛：Andrew G. Ewing教授学术报告（2026年3月20日（周五）下午 15:30-17:30，C512）",
+      "link": "https://chem.whu.edu.cn/info/1277/68281.htm",
       "date": "近期",
-      "category": "双创/经管",
-      "type": "competition",
-      "source": "经济与管理学院",
-      "crawlTime": "2026-04-18T07:41:16.769Z"
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "化学学院",
+      "crawlTime": "2026-04-18T08:00:31.311Z"
     },
     {
-      "title": "关于举办2026年全国大学生商科综合能力大赛武汉大学选拔赛的通知",
-      "link": "https://ems.whu.edu.cn/info/1588/296011.htm",
+      "title": "前沿讲座：武汉大学第八届有机化学论坛（2026年3月21日(周六), 创隆厅）",
+      "link": "https://chem.whu.edu.cn/info/1277/68261.htm",
       "date": "近期",
-      "category": "综合",
-      "type": "competition",
-      "source": "经济与管理学院",
-      "crawlTime": "2026-04-18T07:41:16.769Z"
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "化学学院",
+      "crawlTime": "2026-04-18T08:00:31.311Z"
     },
     {
-      "title": "研析市场经纬，洞察社会万象——第十六届正大杯市场调查与分析大赛武汉大学选拔赛成功举办",
-      "link": "https://ems.whu.edu.cn/info/7678/295921.htm",
+      "title": "关于开展化学与分子科学学院“课题组开放日”活动的通知",
+      "link": "https://chem.whu.edu.cn/info/1581/68831.htm",
       "date": "近期",
-      "category": "综合",
-      "type": "competition",
-      "source": "经济与管理学院",
-      "crawlTime": "2026-04-18T07:41:16.770Z"
+      "category": "活动/综合",
+      "type": "activity",
+      "source": "化学学院",
+      "crawlTime": "2026-04-18T08:00:31.311Z"
     },
     {
-      "title": "会计笃行凝灼见，实战争锋耀韶华——2026年全国高校商业精英挑战赛会计与商业管理案例竞赛武汉大学选拔赛成功举办",
-      "link": "https://ems.whu.edu.cn/info/7678/295681.htm",
+      "title": "关于开展化学与分子科学学院“课题组开放日”活动的通知",
+      "link": "https://chem.whu.edu.cn/info/1889/68861.htm",
       "date": "近期",
-      "category": "双创/经管",
-      "type": "competition",
-      "source": "经济与管理学院",
-      "crawlTime": "2026-04-18T07:41:16.770Z"
+      "category": "活动/综合",
+      "type": "activity",
+      "source": "化学学院",
+      "crawlTime": "2026-04-18T08:00:31.311Z"
+    },
+    {
+      "title": "关于组织开展化学与分子科学学院2026年学生寒期社会实践活动的通知",
+      "link": "https://chem.whu.edu.cn/info/1889/67271.htm",
+      "date": "近期",
+      "category": "活动/综合",
+      "type": "activity",
+      "source": "化学学院",
+      "crawlTime": "2026-04-18T08:00:31.311Z"
+    },
+    {
+      "title": "武汉大学化学与分子科学学院华中地区高校优秀大学生研学营活动通知",
+      "link": "https://chem.whu.edu.cn/info/1741/56981.htm",
+      "date": "近期",
+      "category": "活动/综合",
+      "type": "activity",
+      "source": "化学学院",
+      "crawlTime": "2026-04-18T08:00:31.311Z"
     },
     {
       "title": "【“教与学的革命\"珞珈论坛法学院分论坛】首届国际法本科专业师生午餐会...",
@@ -1157,7 +887,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "法学院",
-      "crawlTime": "2026-04-18T07:41:17.038Z"
+      "crawlTime": "2026-04-18T08:00:31.354Z"
     },
     {
       "title": "教与学的革命|教师发展与能力拓展工作坊第15期顺利举办",
@@ -1166,7 +896,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "法学院",
-      "crawlTime": "2026-04-18T07:41:17.038Z"
+      "crawlTime": "2026-04-18T08:00:31.354Z"
     },
     {
       "title": "2023年武汉大学赴浔、穗两地“书香大使”实践队开展实践活动",
@@ -1175,7 +905,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "法学院",
-      "crawlTime": "2026-04-18T07:41:17.038Z"
+      "crawlTime": "2026-04-18T08:00:31.355Z"
     },
     {
       "title": "2023年武汉大学法学院反家暴法律援助现状调研队开展实践活动",
@@ -1184,7 +914,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "法学院",
-      "crawlTime": "2026-04-18T07:41:17.038Z"
+      "crawlTime": "2026-04-18T08:00:31.355Z"
     },
     {
       "title": "2023年武汉大学法学院反家暴法律援助现状调研队开展实践活动",
@@ -1193,7 +923,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "法学院",
-      "crawlTime": "2026-04-18T07:41:17.038Z"
+      "crawlTime": "2026-04-18T08:00:31.355Z"
     },
     {
       "title": "2023年武汉大学法学院劳资纠纷调研实践队开展实践活动",
@@ -1202,7 +932,277 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "法学院",
-      "crawlTime": "2026-04-18T07:41:17.038Z"
+      "crawlTime": "2026-04-18T08:00:31.355Z"
+    },
+    {
+      "title": "【坚白学术论坛】加州理工学院翟秋实博士后应邀来我院做学术报告 12月31日下午，“坚白”学术论坛（2024年第7期）在测绘学院218会议室成功举办。应李江涛研究员邀请，加州理工学院翟秋实博士后为我院师生带来了一场题为“光纤地震学的研究与展望——以地震、冰震、月震为例”的精彩学术报告。此次论坛由李江涛研究员主持。翟秋实博士后在其报告中首先介绍了分布式光纤声波传感（DAS）技术。作为一项新兴的地震观测技术，DAS能够以较低的成本将现有的光纤转化为密集的地震观测台阵。近年来，DAS技术在陆地、...",
+      "link": "https://main.sgg.whu.edu.cn/info/1367/40131.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "测绘学院",
+      "crawlTime": "2026-04-18T08:00:31.357Z"
+    },
+    {
+      "title": "【学术交流】具身智能导航学术沙龙",
+      "link": "https://main.sgg.whu.edu.cn/info/1367/45131.htm",
+      "date": "近期",
+      "category": "活动/综合",
+      "type": "activity",
+      "source": "测绘学院",
+      "crawlTime": "2026-04-18T08:00:31.357Z"
+    },
+    {
+      "title": "“坚白”高端论坛",
+      "link": "https://main.sgg.whu.edu.cn/info/1367/43211.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "测绘学院",
+      "crawlTime": "2026-04-18T08:00:31.357Z"
+    },
+    {
+      "title": "“坚白”学术论坛（2025年第4期）",
+      "link": "https://main.sgg.whu.edu.cn/info/1367/43001.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "测绘学院",
+      "crawlTime": "2026-04-18T08:00:31.357Z"
+    },
+    {
+      "title": "“坚白”高端论坛（2025年第8期）",
+      "link": "https://main.sgg.whu.edu.cn/info/1367/42871.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "测绘学院",
+      "crawlTime": "2026-04-18T08:00:31.357Z"
+    },
+    {
+      "title": "“坚白”高端论坛（2025年第7期）",
+      "link": "https://main.sgg.whu.edu.cn/info/1367/42621.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "测绘学院",
+      "crawlTime": "2026-04-18T08:00:31.357Z"
+    },
+    {
+      "title": "“坚白”高端论坛（2025年第6期）",
+      "link": "https://main.sgg.whu.edu.cn/info/1367/42461.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "测绘学院",
+      "crawlTime": "2026-04-18T08:00:31.357Z"
+    },
+    {
+      "title": "“坚白”高端论坛（2025年第5期）",
+      "link": "https://main.sgg.whu.edu.cn/info/1367/41881.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "测绘学院",
+      "crawlTime": "2026-04-18T08:00:31.357Z"
+    },
+    {
+      "title": "学院赴江苏省通州高级中学开展招生宣传活动",
+      "link": "https://pmc.whu.edu.cn/info/1088/169351.htm",
+      "date": "近期",
+      "category": "活动/综合",
+      "type": "activity",
+      "source": "动力与机械学院",
+      "crawlTime": "2026-04-18T08:00:31.418Z"
+    },
+    {
+      "title": "秦光照教授学术报告",
+      "link": "https://civ.whu.edu.cn/info/1189/67751.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "土木建筑工程学院",
+      "crawlTime": "2026-04-18T08:00:31.423Z"
+    },
+    {
+      "title": "Jian Zuo教授学术报告",
+      "link": "https://civ.whu.edu.cn/info/1189/67701.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "土木建筑工程学院",
+      "crawlTime": "2026-04-18T08:00:31.423Z"
+    },
+    {
+      "title": "刘灏研究员学术报告",
+      "link": "https://civ.whu.edu.cn/info/1189/67671.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "土木建筑工程学院",
+      "crawlTime": "2026-04-18T08:00:31.423Z"
+    },
+    {
+      "title": "电气与自动化学院党委举办树立和践行正确政绩观学习教育读书班暨党建工作专题研讨会",
+      "link": "https://eea.whu.edu.cn/info/1051/81831.htm",
+      "date": "近期",
+      "category": "活动/综合",
+      "type": "activity",
+      "source": "电气与自动化学院",
+      "crawlTime": "2026-04-18T08:00:31.507Z"
+    },
+    {
+      "title": "关于召开中国电工技术学会等离子体及应用专业委员会前沿交叉论坛第十五期“等离子体和能源转化-固氮与合成氨（2026）”的通知",
+      "link": "https://eea.whu.edu.cn/info/1052/81891.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "电气与自动化学院",
+      "crawlTime": "2026-04-18T08:00:31.507Z"
+    },
+    {
+      "title": "【\"珞珈论电\"国际同行】系列讲座（第4—6期）顺利举行",
+      "link": "https://eea.whu.edu.cn/info/1285/81741.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "电气与自动化学院",
+      "crawlTime": "2026-04-18T08:00:31.507Z"
+    },
+    {
+      "title": "俄罗斯脉冲功率专家Vladimir Efanov博士来访并作学术报告",
+      "link": "https://eea.whu.edu.cn/info/1285/81231.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "电气与自动化学院",
+      "crawlTime": "2026-04-18T08:00:31.507Z"
+    },
+    {
+      "title": "促进志愿服务常态化 续写雷锋精神新故事 ——电气与自动化学院团委小亭志愿服务中心",
+      "link": "https://eea.whu.edu.cn/info/1361/11213.htm",
+      "date": "近期",
+      "category": "活动/社团",
+      "type": "activity",
+      "source": "电气与自动化学院",
+      "crawlTime": "2026-04-18T08:00:31.508Z"
+    },
+    {
+      "title": "武汉大学承办长江水环境科技创新发展论坛",
+      "link": "https://sres.whu.edu.cn/info/3761/337071.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "资源与环境科学学院",
+      "crawlTime": "2026-04-18T08:00:31.561Z"
+    },
+    {
+      "title": "党建引领绘蓝图，三校同心守沃野 | 华中三校师生党支部共建暨“环语菁英”论坛（第6期）顺利举行",
+      "link": "https://sres.whu.edu.cn/info/3761/340921.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "资源与环境科学学院",
+      "crawlTime": "2026-04-18T08:00:31.561Z"
+    },
+    {
+      "title": "探访都市环保，共话生态文明 | 校企支部共建暨环语菁英论坛（第4期）顺利举行",
+      "link": "https://sres.whu.edu.cn/info/3761/340251.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "资源与环境科学学院",
+      "crawlTime": "2026-04-18T08:00:31.561Z"
+    },
+    {
+      "title": "【地球系统科学讲坛】第一讲：大气成分智能遥感监测及其环境健康效应",
+      "link": "https://sres.whu.edu.cn/info/3331/340911.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "资源与环境科学学院",
+      "crawlTime": "2026-04-18T08:00:31.561Z"
+    },
+    {
+      "title": "【学术讲座】12月22日下午 福州大学 陈佐旗 副研究员 空天夜光遥感数据处理与多尺度城乡问题研究",
+      "link": "https://sres.whu.edu.cn/info/3331/338211.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "资源与环境科学学院",
+      "crawlTime": "2026-04-18T08:00:31.561Z"
+    },
+    {
+      "title": "科技赋能，生态治水——共探生态水文创新前沿暨行业前沿讲座",
+      "link": "https://sres.whu.edu.cn/info/3331/338151.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "资源与环境科学学院",
+      "crawlTime": "2026-04-18T08:00:31.561Z"
+    },
+    {
+      "title": "【学术报告】12月13日上午11:00-12:00 中科院地理所 苏奋振研究员 世界大变局与地理学",
+      "link": "https://sres.whu.edu.cn/info/3331/337871.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "资源与环境科学学院",
+      "crawlTime": "2026-04-18T08:00:31.561Z"
+    },
+    {
+      "title": "贸通天下展风采，商海实战砺英才 ——2026年“天壕·珞珈梧桐杯”武汉大学国际贸易业务模拟大赛暨2026年全国高校商业精英挑战赛国际贸易竞赛国际贸易业务模拟赛道武汉大学选拔赛成功举办",
+      "link": "https://ems.whu.edu.cn/info/1587/297551.htm",
+      "date": "近期",
+      "category": "双创/经管",
+      "type": "competition",
+      "source": "经济与管理学院",
+      "crawlTime": "2026-04-18T08:00:31.686Z"
+    },
+    {
+      "title": "凝心聚力 迎“篮”而上——我院教职工男子篮球队征战第四届“冠军杯”联赛",
+      "link": "https://ems.whu.edu.cn/info/1587/296581.htm",
+      "date": "近期",
+      "category": "综合",
+      "type": "competition",
+      "source": "经济与管理学院",
+      "crawlTime": "2026-04-18T08:00:31.686Z"
+    },
+    {
+      "title": "会计笃行凝灼见，实战争锋耀韶华——2026年全国高校商业精英挑战赛会计与商业管理案例竞赛武汉大学选拔赛成功举办",
+      "link": "https://ems.whu.edu.cn/info/1587/295671.htm",
+      "date": "近期",
+      "category": "双创/经管",
+      "type": "competition",
+      "source": "经济与管理学院",
+      "crawlTime": "2026-04-18T08:00:31.686Z"
+    },
+    {
+      "title": "关于举办2026年全国大学生商科综合能力大赛武汉大学选拔赛的通知",
+      "link": "https://ems.whu.edu.cn/info/1588/296011.htm",
+      "date": "近期",
+      "category": "综合",
+      "type": "competition",
+      "source": "经济与管理学院",
+      "crawlTime": "2026-04-18T08:00:31.686Z"
+    },
+    {
+      "title": "研析市场经纬，洞察社会万象——第十六届正大杯市场调查与分析大赛武汉大学选拔赛成功举办",
+      "link": "https://ems.whu.edu.cn/info/7678/295921.htm",
+      "date": "近期",
+      "category": "综合",
+      "type": "competition",
+      "source": "经济与管理学院",
+      "crawlTime": "2026-04-18T08:00:31.686Z"
+    },
+    {
+      "title": "会计笃行凝灼见，实战争锋耀韶华——2026年全国高校商业精英挑战赛会计与商业管理案例竞赛武汉大学选拔赛成功举办",
+      "link": "https://ems.whu.edu.cn/info/7678/295681.htm",
+      "date": "近期",
+      "category": "双创/经管",
+      "type": "competition",
+      "source": "经济与管理学院",
+      "crawlTime": "2026-04-18T08:00:31.686Z"
     },
     {
       "title": "我院吴江教授团队参编的《数算协同报告》在全国一体化算力网建设研讨会上发布",
@@ -1211,7 +1211,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "信息管理学院",
-      "crawlTime": "2026-04-18T07:41:17.066Z"
+      "crawlTime": "2026-04-18T08:00:31.792Z"
     },
     {
       "title": "《数智时代中国图书馆影响力指数报告（2025）》发布",
@@ -1220,7 +1220,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "信息管理学院",
-      "crawlTime": "2026-04-18T07:41:17.066Z"
+      "crawlTime": "2026-04-18T08:00:31.792Z"
     },
     {
       "title": "“珞珈信管·名家讲坛”首期开讲：周晓英教授解析文化遗产数字化创新",
@@ -1229,7 +1229,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "信息管理学院",
-      "crawlTime": "2026-04-18T07:41:17.066Z"
+      "crawlTime": "2026-04-18T08:00:31.792Z"
     },
     {
       "title": "我院青协获评 2024 年度校“十大杰出志愿服务集体”",
@@ -1238,7 +1238,7 @@
       "category": "活动/社团",
       "type": "activity",
       "source": "信息管理学院",
-      "crawlTime": "2026-04-18T07:41:17.066Z"
+      "crawlTime": "2026-04-18T08:00:31.792Z"
     },
     {
       "title": "我院“企业开讲啦！——名企进学院”活动顺利首秀",
@@ -1247,7 +1247,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "信息管理学院",
-      "crawlTime": "2026-04-18T07:41:17.066Z"
+      "crawlTime": "2026-04-18T08:00:31.792Z"
     },
     {
       "title": "强化身份意识 不忘初心使命——我院情报学博士研究生党支部开展党的二十届四中全会精神专题学习活动",
@@ -1256,7 +1256,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "信息管理学院",
-      "crawlTime": "2026-04-18T07:41:17.067Z"
+      "crawlTime": "2026-04-18T08:00:31.792Z"
     },
     {
       "title": "学全会精神 领数智新声——我院图书馆学系师生党支部联合开展主题党日活动",
@@ -1265,7 +1265,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "信息管理学院",
-      "crawlTime": "2026-04-18T07:41:17.067Z"
+      "crawlTime": "2026-04-18T08:00:31.792Z"
     },
     {
       "title": "我院研究生党支部联席会主席团换届大会暨第二十六期“红帆领航”党员骨干训练营活动举行",
@@ -1274,7 +1274,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "信息管理学院",
-      "crawlTime": "2026-04-18T07:41:17.067Z"
+      "crawlTime": "2026-04-18T08:00:31.792Z"
     },
     {
       "title": "本周四（4月16日）下午活动安排",
@@ -1283,7 +1283,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "信息管理学院",
-      "crawlTime": "2026-04-18T07:41:17.067Z"
+      "crawlTime": "2026-04-18T08:00:31.792Z"
     },
     {
       "title": "第四届科技计量与科技管理青年论坛（2026）会议通知",
@@ -1292,7 +1292,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "信息管理学院",
-      "crawlTime": "2026-04-18T07:41:17.067Z"
+      "crawlTime": "2026-04-18T08:00:31.792Z"
     },
     {
       "title": "本周四（3月26日）下午活动安排",
@@ -1301,7 +1301,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "信息管理学院",
-      "crawlTime": "2026-04-18T07:41:17.067Z"
+      "crawlTime": "2026-04-18T08:00:31.792Z"
     },
     {
       "title": "武汉大学“弘毅博士后”计划2025年全球招募公告",
@@ -1310,7 +1310,7 @@
       "category": "活动/社团",
       "type": "activity",
       "source": "信息管理学院",
-      "crawlTime": "2026-04-18T07:41:17.067Z"
+      "crawlTime": "2026-04-18T08:00:31.792Z"
     },
     {
       "title": "武汉大学博士后全球招募 诚邀全球青年英才加盟",
@@ -1319,7 +1319,7 @@
       "category": "活动/社团",
       "type": "activity",
       "source": "信息管理学院",
-      "crawlTime": "2026-04-18T07:41:17.067Z"
+      "crawlTime": "2026-04-18T08:00:31.792Z"
     },
     {
       "title": "“珞珈信管·博后沙龙”第一讲丨刘家伟：信息操纵与科技文献大模型可靠性",
@@ -1328,7 +1328,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "信息管理学院",
-      "crawlTime": "2026-04-18T07:41:17.068Z"
+      "crawlTime": "2026-04-18T08:00:31.792Z"
     },
     {
       "title": "第十届澜沧江-湄公河流域治理与发展青年创新设计大赛重磅来袭！同饮一江水…",
@@ -1337,7 +1337,7 @@
       "category": "双创/经管",
       "type": "competition",
       "source": "政治与公共管理学院",
-      "crawlTime": "2026-04-18T07:41:17.398Z"
+      "crawlTime": "2026-04-18T08:00:32.595Z"
     },
     {
       "title": "武汉大学主办“澜沧江湄公河——长江文明论坛”",
@@ -1346,7 +1346,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "政治与公共管理学院",
-      "crawlTime": "2026-04-18T07:41:17.527Z"
+      "crawlTime": "2026-04-18T08:00:32.695Z"
     },
     {
       "title": "我院羽毛球队以小组第一名昂首挺进学校羽毛球比赛甲级队八强",
@@ -1355,7 +1355,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "政治与公共管理学院",
-      "crawlTime": "2026-04-18T07:41:17.527Z"
+      "crawlTime": "2026-04-18T08:00:32.695Z"
     },
     {
       "title": "卫生政策与管理学科展望：新议题、新方法、新场景学术论坛 暨武汉大学公共…",
@@ -1364,7 +1364,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "政治与公共管理学院",
-      "crawlTime": "2026-04-18T07:41:17.527Z"
+      "crawlTime": "2026-04-18T08:00:32.695Z"
     },
     {
       "title": "中国式现代化进程中的治理范式变革 ——第十九届珞珈国是论坛暨全国博士生…",
@@ -1373,7 +1373,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "政治与公共管理学院",
-      "crawlTime": "2026-04-18T07:41:17.528Z"
+      "crawlTime": "2026-04-18T08:00:32.695Z"
     },
     {
       "title": "珞珈政治学深度工作坊第9期“驯化财产：卢梭与指向平等的政治经济学”成功…",
@@ -1382,7 +1382,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "政治与公共管理学院",
-      "crawlTime": "2026-04-18T07:41:17.528Z"
+      "crawlTime": "2026-04-18T08:00:32.695Z"
     },
     {
       "title": "【学术活动预告】珞珈政治学深度工作坊 | 驯化财产：卢梭与指向平等的政治…",
@@ -1391,7 +1391,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "政治与公共管理学院",
-      "crawlTime": "2026-04-18T07:41:17.528Z"
+      "crawlTime": "2026-04-18T08:00:32.695Z"
     },
     {
       "title": "珞珈MPA论坛 | 有效市场与有为政府协同：中国特色市场监管治理的理论逻辑与…",
@@ -1400,7 +1400,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "政治与公共管理学院",
-      "crawlTime": "2026-04-18T07:41:17.528Z"
+      "crawlTime": "2026-04-18T08:00:32.695Z"
     },
     {
       "title": "珞珈政治学论坛“县域政治研究的传统、框架和前景”成功举办",
@@ -1409,7 +1409,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "政治与公共管理学院",
-      "crawlTime": "2026-04-18T07:41:17.528Z"
+      "crawlTime": "2026-04-18T08:00:32.695Z"
     },
     {
       "title": "珞珈政治学论坛 | 县域政治学研究的传统、框架和前景",
@@ -1418,7 +1418,16 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "政治与公共管理学院",
-      "crawlTime": "2026-04-18T07:41:17.528Z"
+      "crawlTime": "2026-04-18T08:00:32.695Z"
+    },
+    {
+      "title": "柴彬：工业革命前夕的英国工商业国家治... 讲座简介：作为世界历史上第一个工业化国家，英国之所以能够率先实现工业化，与工业革命前夕...",
+      "link": "https://history.whu.edu.cn/info/1061/33651.htm",
+      "date": "近期",
+      "category": "活动/学术",
+      "type": "activity",
+      "source": "历史学院",
+      "crawlTime": "2026-04-18T08:00:33.216Z"
     },
     {
       "title": "2026年全国大学生英语竞赛（武汉大学赛区）顺利举行",
@@ -1427,7 +1436,7 @@
       "category": "语言/人文",
       "type": "competition",
       "source": "外国语言文学学院(主站)",
-      "crawlTime": "2026-04-18T07:41:18.916Z"
+      "crawlTime": "2026-04-18T08:00:33.809Z"
     },
     {
       "title": "喜报|我院法语系学子在2025年全国口译大赛荣获佳绩04-01",
@@ -1436,7 +1445,7 @@
       "category": "综合",
       "type": "competition",
       "source": "外国语言文学学院(主站)",
-      "crawlTime": "2026-04-18T07:41:18.916Z"
+      "crawlTime": "2026-04-18T08:00:33.810Z"
     },
     {
       "title": "喜报|翻译系研究生在第十四届全国口译大赛总决赛中斩获佳绩03-31",
@@ -1445,7 +1454,7 @@
       "category": "语言/人文",
       "type": "competition",
       "source": "外国语言文学学院(主站)",
-      "crawlTime": "2026-04-18T07:41:18.916Z"
+      "crawlTime": "2026-04-18T08:00:33.810Z"
     },
     {
       "title": "自强弘毅展风采，外院学子跨文化舞台显锋芒——武汉大学代表队在第八届“外教社杯”全国高校学生跨文化能力大赛中斩获6大奖项，荣膺国家特等奖12-22",
@@ -1454,7 +1463,7 @@
       "category": "综合",
       "type": "competition",
       "source": "外国语言文学学院(主站)",
-      "crawlTime": "2026-04-18T07:41:18.916Z"
+      "crawlTime": "2026-04-18T08:00:33.810Z"
     },
     {
       "title": "武汉大学化学与分子科学学院2026年招收攻读博士学位研究生报名通知 (第二批次普通招考)",
@@ -1463,7 +1472,7 @@
       "category": "数理/基础",
       "type": "competition",
       "source": "化学与分子科学学院(主站)",
-      "crawlTime": "2026-04-18T07:41:19.052Z"
+      "crawlTime": "2026-04-18T08:00:34.096Z"
     },
     {
       "title": "火炬杯再续荣光！电信男排勇夺冠军，女排斩获第七，双队齐创佳绩 4月16日，武汉大学2026年“火炬杯”排球赛事圆满收官，电子信息学院男女排捷报频传。男排连续九年闯入决赛，夺得八个冠军，女排荣获第七名，展现电信学子昂扬向上的体育风采和永不言弃的竞技精神！男排决赛对阵生命科学学院，全程气势如虹、稳扎稳打。首局双方陷入激烈拉锯，比分多次紧咬追平，电信队员以灵活的扣杀与轻吊交替得分，牢牢掌控节奏，局末抓住关键机会，以 25:20 先下一城。第二局电信火力全开，大力跳发施压、犀利扣杀得分、严密拦网防守，多点开花压制对手，迅速拉开比分，以 25:12 再下一城。第三局对手背水一战发起猛烈反扑，电信队员顶住压力、沉着应对，关键分毫不手软，最终以 25:18 锁定胜局，三局全胜强势登顶。女排赛场也是精彩不断。电信女排在整项赛事中敢打敢拼、迎难而上，面对实力强劲的对手毫不畏惧，每一球都全力争取、每一次防守都拼尽全力。队员们在场上默契配合、互相鼓励，不断调整战术、弥补不足，用坚韧的意志与扎实的基本功一路奋勇争先，最终在与法学院排球队的比赛中斩获第七名，用拼搏为学院增添光彩。现场鼓声与欢呼震耳欲聋，“电信，加油！”的呐喊声始终未曾停歇。聚光灯下，电信青年们一次次突破自我、发起凌厉反击，飞身救球的背影里写满不服输的倔强，更饱含为胜利与荣耀全力拼搏的决心——这正是竞技体育最动人的模样。 赛后体育馆内欢呼声如潮水涌来，队员们相拥而庆，汗水与笑容交织。男排以冠军书写辉煌，女排以第七突破自我，他们用实力与意志诠释电信精神，为学院赢得荣光。鼓声不息，呐喊不止！ 祝贺电信男排问鼎火炬杯，致敬电信女排奋勇拼搏！愿电信健儿继续乘风破浪，未来再创佳绩！ （通讯员：张美铃，王睿卿 ；摄影：刘苏仁）",
@@ -1472,7 +1481,7 @@
       "category": "电子/信息",
       "type": "competition",
       "source": "电子信息学院(主站)",
-      "crawlTime": "2026-04-18T07:41:19.781Z"
+      "crawlTime": "2026-04-18T08:00:35.052Z"
     },
     {
       "title": "关于组织研究生参加武汉大学第二十届研究生电子设计大赛暨第二十一届中国研究生电子设计竞赛校园选拔赛的通知",
@@ -1481,7 +1490,7 @@
       "category": "设计/艺术",
       "type": "competition",
       "source": "电子信息学院(主站)",
-      "crawlTime": "2026-04-18T07:41:19.782Z"
+      "crawlTime": "2026-04-18T08:00:35.052Z"
     },
     {
       "title": "关于组织研究生参加第九届中国研究生创“芯”大赛武汉大学选拔赛的通知",
@@ -1490,52 +1499,7 @@
       "category": "综合",
       "type": "competition",
       "source": "电子信息学院(主站)",
-      "crawlTime": "2026-04-18T07:41:19.782Z"
-    },
-    {
-      "title": "传承雷锋精神，争做时代先锋—— 生命科学学院2025级强基班团支部开展团日活动",
-      "link": "https://bio.whu.edu.cn/info/1598/116186.htm",
-      "date": "近期",
-      "category": "活动/综合",
-      "type": "activity",
-      "source": "生命科学学院(主站)",
-      "crawlTime": "2026-04-18T07:41:22.296Z"
-    },
-    {
-      "title": "生命科学学院开展权益座谈会活动",
-      "link": "https://bio.whu.edu.cn/info/1598/116166.htm",
-      "date": "近期",
-      "category": "活动/综合",
-      "type": "activity",
-      "source": "生命科学学院(主站)",
-      "crawlTime": "2026-04-18T07:41:22.297Z"
-    },
-    {
-      "title": "“从珞珈山到大别山——党员进中学”系列活动第二期 | 生命科学学院本科生党员走进红安一中",
-      "link": "https://bio.whu.edu.cn/info/1550/114406.htm",
-      "date": "近期",
-      "category": "活动/综合",
-      "type": "activity",
-      "source": "生命科学学院(主站)",
-      "crawlTime": "2026-04-18T07:41:22.297Z"
-    },
-    {
-      "title": "“稻香润初心，粮安担使命”本科生第三党支部主题党日活动",
-      "link": "https://bio.whu.edu.cn/info/1601/110976.htm",
-      "date": "近期",
-      "category": "活动/综合",
-      "type": "activity",
-      "source": "生命科学学院(主站)",
-      "crawlTime": "2026-04-18T07:41:22.297Z"
-    },
-    {
-      "title": "“烽火忆峥嵘，盛世启新程”红色教育活动：观《志愿军》铸信仰，缅怀烈士续初心",
-      "link": "https://bio.whu.edu.cn/info/1601/111916.htm",
-      "date": "近期",
-      "category": "活动/社团",
-      "type": "activity",
-      "source": "生命科学学院(主站)",
-      "crawlTime": "2026-04-18T07:41:22.297Z"
+      "crawlTime": "2026-04-18T08:00:35.052Z"
     },
     {
       "title": "讲座预告｜珞珈经管青年论坛第五百零四期——经济学论坛",
@@ -1544,7 +1508,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "经管学院",
-      "crawlTime": "2026-04-18T07:41:16.110Z"
+      "crawlTime": "2026-04-18T08:00:30.764Z"
     },
     {
       "title": "讲座预告｜珞珈经管青年论坛第五百零二期——经济学论坛",
@@ -1553,7 +1517,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "经管学院",
-      "crawlTime": "2026-04-18T07:41:16.110Z"
+      "crawlTime": "2026-04-18T08:00:30.764Z"
     },
     {
       "title": "讲座预告｜景林珞珈金融论坛--访问学者前沿课程《高级金融理论》(04.22-24，共3场）",
@@ -1562,7 +1526,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "经管学院",
-      "crawlTime": "2026-04-18T07:41:16.110Z"
+      "crawlTime": "2026-04-18T08:00:30.764Z"
     },
     {
       "title": "讲座预告｜珞珈经管创新论坛第148期——会计论坛",
@@ -1571,7 +1535,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "经管学院",
-      "crawlTime": "2026-04-18T07:41:16.110Z"
+      "crawlTime": "2026-04-18T08:00:30.764Z"
     },
     {
       "title": "会议预告｜中国世界经济学会国际金融论坛",
@@ -1580,7 +1544,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "经管学院",
-      "crawlTime": "2026-04-18T07:41:16.110Z"
+      "crawlTime": "2026-04-18T08:00:30.764Z"
     },
     {
       "title": "讲座预告｜珞珈经管青年论坛第五百零三期——会计论坛",
@@ -1589,7 +1553,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "经管学院",
-      "crawlTime": "2026-04-18T07:41:16.110Z"
+      "crawlTime": "2026-04-18T08:00:30.764Z"
     },
     {
       "title": "讲座预告｜珞珈经管青年论坛第五百零一期——会计论坛",
@@ -1598,7 +1562,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "经管学院",
-      "crawlTime": "2026-04-18T07:41:16.110Z"
+      "crawlTime": "2026-04-18T08:00:30.764Z"
     },
     {
       "title": "讲座预告｜珞珈经管青年论坛第五百期——经济学论坛",
@@ -1607,7 +1571,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "经管学院",
-      "crawlTime": "2026-04-18T07:41:16.111Z"
+      "crawlTime": "2026-04-18T08:00:30.764Z"
     },
     {
       "title": "武汉海关联合武汉大学开展国门生物安全主题宣讲活动",
@@ -1616,7 +1580,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "武汉大学官网",
-      "crawlTime": "2026-04-18T07:41:15.897Z"
+      "crawlTime": "2026-04-18T08:00:30.300Z"
     },
     {
       "title": "刘胜院士出席“同心大讲堂”并作报告",
@@ -1625,7 +1589,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "武汉大学官网",
-      "crawlTime": "2026-04-18T07:41:15.897Z"
+      "crawlTime": "2026-04-18T08:00:30.300Z"
     },
     {
       "title": "【珞珈讲坛】张培震院士分享公里级分辨率青藏高原现今构造变形研究",
@@ -1634,7 +1598,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "武汉大学官网",
-      "crawlTime": "2026-04-18T07:41:15.897Z"
+      "crawlTime": "2026-04-18T08:00:30.300Z"
     },
     {
       "title": "测绘学院第80期入党积极分子培训班顺利开班4月9日，测绘学院第80期入党积极分子培训班开班仪式暨第一次党课在学院202报告厅顺利举行。学院党委副书记胡俊英出席仪式并进行开班动员讲话。培训班班主任、学工办副主任李超主持本次开班仪式。首先，全体起立，奏唱国歌。大会第二项，全体学员集中观看优质课程视频——中央党校曹鹏飞教授主讲的“学习贯彻《中国共产党章程》”。会上，学院党委副书记胡俊英作动员讲话。她阐述了培训的目的在于帮助大家进一步坚定理想信念、增强党性修养、...",
@@ -1643,7 +1607,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "测绘学院",
-      "crawlTime": "2026-04-18T07:41:16.463Z"
+      "crawlTime": "2026-04-18T08:00:31.356Z"
     },
     {
       "title": "【学习教育进行时】武汉大学领导班子树立和践行正确政绩观学习教育读书班第四期举办",
@@ -1652,7 +1616,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "武汉大学官网",
-      "crawlTime": "2026-04-18T07:41:15.897Z"
+      "crawlTime": "2026-04-18T08:00:30.300Z"
     },
     {
       "title": "计算机学院2026年普通招考博士研究生 （第二批次）报名通知",
@@ -1661,7 +1625,7 @@
       "category": "IT/计算机",
       "type": "competition",
       "source": "计算机学院(主站)",
-      "crawlTime": "2026-04-18T07:41:19.920Z"
+      "crawlTime": "2026-04-18T08:00:34.510Z"
     },
     {
       "title": "关于举办2026年“学创杯”全国大学生创业综合模拟大赛武汉大学选拔赛的通知",
@@ -1670,7 +1634,7 @@
       "category": "双创/经管",
       "type": "competition",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:12.757Z"
+      "crawlTime": "2026-04-18T08:00:26.840Z"
     },
     {
       "title": "遥感信息工程学院2026年招收攻读博士学位研究生第二批次报名通知",
@@ -1679,7 +1643,7 @@
       "category": "综合",
       "type": "competition",
       "source": "遥感信息工程学院(主站)",
-      "crawlTime": "2026-04-18T07:41:20.091Z"
+      "crawlTime": "2026-04-18T08:00:34.587Z"
     },
     {
       "title": "学院召开树立和践行正确政绩观学习教育读书班开班式暨党委理论学习中心组（扩大）学习会",
@@ -1688,7 +1652,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "动力与机械学院",
-      "crawlTime": "2026-04-18T07:41:16.473Z"
+      "crawlTime": "2026-04-18T08:00:31.419Z"
     },
     {
       "title": "首届一流网安人才培养学生工作论坛成功举办",
@@ -1697,7 +1661,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:15.915Z"
+      "crawlTime": "2026-04-18T08:00:30.129Z"
     },
     {
       "title": "2026年全国大学生英语竞赛（NECCS2026）武汉大学赛区初赛通知",
@@ -1706,7 +1670,7 @@
       "category": "语言/人文",
       "type": "competition",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:12.757Z"
+      "crawlTime": "2026-04-18T08:00:26.840Z"
     },
     {
       "title": "“绘寻南十字”武汉大学测绘学院赴新西兰开展国际交流实践活动为深入学习贯彻习近平新时代中国特色社会主义思想和党的二十大精神，全面落实立德树人根本任务，践行习近平总书记“要把科学普及放在与科技创新同等重要的位置”的重要论述，高质量服务共建“一带一路”倡议，2026年2月23日至3月4日，在共青团武汉大学委员会、武汉大学国际交流部的共同指导下，武汉大学测绘学院“绘寻南十字”实践队远赴新西兰基督城，开展为期10天的国际交流实践活动。本次实践恰逢武汉与基督城缔结友好城市20周年。...",
@@ -1715,7 +1679,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "测绘学院",
-      "crawlTime": "2026-04-18T07:41:16.463Z"
+      "crawlTime": "2026-04-18T08:00:31.356Z"
     },
     {
       "title": "【网上报名开启】武汉大学2026年法律博士研究生报名通知",
@@ -1724,7 +1688,7 @@
       "category": "综合",
       "type": "competition",
       "source": "法学院(主站)",
-      "crawlTime": "2026-04-18T07:41:18.787Z"
+      "crawlTime": "2026-04-18T08:00:33.608Z"
     },
     {
       "title": "关于组织参加第十八届“华中杯”大学生数学建模挑战赛的通知",
@@ -1733,7 +1697,7 @@
       "category": "数理/基础",
       "type": "competition",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:12.757Z"
+      "crawlTime": "2026-04-18T08:00:26.840Z"
     },
     {
       "title": "关于组织参加2026年全国大学生嵌入式芯片与系统设计竞赛的通知",
@@ -1742,7 +1706,7 @@
       "category": "设计/艺术",
       "type": "competition",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:12.757Z"
+      "crawlTime": "2026-04-18T08:00:26.840Z"
     },
     {
       "title": "学院连续五年捧回“健美珞珈杯”",
@@ -1751,7 +1715,7 @@
       "category": "综合",
       "type": "competition",
       "source": "遥感学院",
-      "crawlTime": "2026-04-18T07:41:14.103Z"
+      "crawlTime": "2026-04-18T08:00:28.021Z"
     },
     {
       "title": "学院王少华教授在湖北省职工创业创新大赛中获奖",
@@ -1760,7 +1724,7 @@
       "category": "双创/经管",
       "type": "competition",
       "source": "遥感学院",
-      "crawlTime": "2026-04-18T07:41:14.103Z"
+      "crawlTime": "2026-04-18T08:00:28.021Z"
     },
     {
       "title": "清华大学袁荒教授应邀来我院作“先进航空发动机结构强度设计新挑战”的学术报告",
@@ -1769,7 +1733,7 @@
       "category": "活动/学术",
       "type": "activity",
       "source": "土木建筑工程学院",
-      "crawlTime": "2026-04-18T07:41:16.640Z"
+      "crawlTime": "2026-04-18T08:00:31.423Z"
     },
     {
       "title": "关于开展武汉大学2026年大学生节能减排社会实践与科技竞赛的通知",
@@ -1778,7 +1742,7 @@
       "category": "综合",
       "type": "competition",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:12.757Z"
+      "crawlTime": "2026-04-18T08:00:26.840Z"
     },
     {
       "title": "招生通知  政治与公共管理学院2026年（第二批次）博士研究生普通招考报名通知",
@@ -1787,7 +1751,7 @@
       "category": "综合",
       "type": "competition",
       "source": "政治与公共管理学院",
-      "crawlTime": "2026-04-18T07:41:17.398Z"
+      "crawlTime": "2026-04-18T08:00:32.596Z"
     },
     {
       "title": "关于组织参加第19届中国大学生计算机设计大赛的通知",
@@ -1796,7 +1760,7 @@
       "category": "IT/计算机",
       "type": "competition",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:12.757Z"
+      "crawlTime": "2026-04-18T08:00:26.840Z"
     },
     {
       "title": "关于开展武汉大学2026年中国机器人大赛暨RoboCup机器人世界杯中国赛校内选拔的通知",
@@ -1805,7 +1769,7 @@
       "category": "综合",
       "type": "competition",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:12.757Z"
+      "crawlTime": "2026-04-18T08:00:26.840Z"
     },
     {
       "title": "关于开展武汉大学2026年中国机器人及人工智能大赛校内选拔的通知",
@@ -1814,7 +1778,7 @@
       "category": "电子/信息",
       "type": "competition",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:12.757Z"
+      "crawlTime": "2026-04-18T08:00:26.840Z"
     },
     {
       "title": "关于组织参加第五届合成生物学创新赛的报名通知",
@@ -1823,7 +1787,7 @@
       "category": "双创/经管",
       "type": "competition",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:12.757Z"
+      "crawlTime": "2026-04-18T08:00:26.840Z"
     },
     {
       "title": "关于组织参加第14届未来设计师•全国高校数字艺术设计大赛（NCDA）的通知",
@@ -1832,7 +1796,7 @@
       "category": "设计/艺术",
       "type": "competition",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:12.757Z"
+      "crawlTime": "2026-04-18T08:00:26.840Z"
     },
     {
       "title": "关于举办武汉大学2026年全国高校商业精英挑战赛国际贸易竞赛（国际贸易业务模拟赛道）校内选拔赛的通知",
@@ -1841,7 +1805,7 @@
       "category": "双创/经管",
       "type": "competition",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:12.757Z"
+      "crawlTime": "2026-04-18T08:00:26.840Z"
     },
     {
       "title": "我校代表队荣获2026年中国高校国际刑事法院模拟法庭竞赛（英文）一等奖",
@@ -1850,16 +1814,7 @@
       "category": "综合",
       "type": "competition",
       "source": "法学院",
-      "crawlTime": "2026-04-18T07:41:13.923Z"
-    },
-    {
-      "title": "2026中国翻译协会年会报名通知",
-      "link": "https://fls.whu.edu.cn/info/1008/57211.htm",
-      "date": "2026-03-10",
-      "category": "语言/人文",
-      "type": "competition",
-      "source": "外语学院",
-      "crawlTime": "2026-04-18T07:41:16.287Z"
+      "crawlTime": "2026-04-18T08:00:27.807Z"
     },
     {
       "title": "第十一届全国大学生“创新杯”地球物理知识竞赛报名通知",
@@ -1868,7 +1823,7 @@
       "category": "数理/基础",
       "type": "competition",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:12.757Z"
+      "crawlTime": "2026-04-18T08:00:26.840Z"
     },
     {
       "title": "第十一届“中国高校计算机大赛-团体程序设计天梯赛”报名通知",
@@ -1877,7 +1832,7 @@
       "category": "IT/计算机",
       "type": "competition",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:12.757Z"
+      "crawlTime": "2026-04-18T08:00:26.840Z"
     },
     {
       "title": "武汉大学代表队获国际航空法模拟法庭竞赛中国区选拔赛亚军",
@@ -1886,7 +1841,7 @@
       "category": "综合",
       "type": "competition",
       "source": "法学院",
-      "crawlTime": "2026-04-18T07:41:13.923Z"
+      "crawlTime": "2026-04-18T08:00:27.807Z"
     },
     {
       "title": "​2026年武汉大学成图创新设计大赛报名通知",
@@ -1895,7 +1850,7 @@
       "category": "双创/经管",
       "type": "competition",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:12.757Z"
+      "crawlTime": "2026-04-18T08:00:26.840Z"
     },
     {
       "title": "关于举办武汉大学2026年全国高校商业精英挑战赛会计与商业管理案例竞赛校内选拔赛的通知",
@@ -1904,7 +1859,7 @@
       "category": "双创/经管",
       "type": "competition",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:12.757Z"
+      "crawlTime": "2026-04-18T08:00:26.840Z"
     },
     {
       "title": "关于举办“美均-辉景杯”武汉大学第十二届大学生金相技能大赛的通知",
@@ -1913,7 +1868,7 @@
       "category": "综合",
       "type": "competition",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:12.757Z"
+      "crawlTime": "2026-04-18T08:00:26.840Z"
     },
     {
       "title": "关于组织武汉大学学生参加2026年全国大学生英语竞赛的通知",
@@ -1922,7 +1877,16 @@
       "category": "语言/人文",
       "type": "competition",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:12.757Z"
+      "crawlTime": "2026-04-18T08:00:26.840Z"
+    },
+    {
+      "title": "我院研究生在全国仿真创新应用大赛获一等奖",
+      "link": "https://sim.whu.edu.cn/info/1748/110652.htm",
+      "date": "2025-12-30",
+      "category": "双创/经管",
+      "type": "competition",
+      "source": "信息管理学院",
+      "crawlTime": "2026-04-18T08:00:31.798Z"
     },
     {
       "title": "2027年全国大学生电子设计竞赛培训报名暨第一批次寒假培训安排",
@@ -1931,7 +1895,7 @@
       "category": "设计/艺术",
       "type": "competition",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:12.757Z"
+      "crawlTime": "2026-04-18T08:00:26.840Z"
     },
     {
       "title": "第十六届全国大学生电子商务“创新、创意及创业”挑战赛报名通知",
@@ -1940,7 +1904,7 @@
       "category": "双创/经管",
       "type": "competition",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:12.757Z"
+      "crawlTime": "2026-04-18T08:00:26.840Z"
     },
     {
       "title": "蝉联冠军！武大代表队再度问鼎国际空间法模拟法庭竞赛",
@@ -1949,7 +1913,7 @@
       "category": "综合",
       "type": "competition",
       "source": "法学院",
-      "crawlTime": "2026-04-18T07:41:13.923Z"
+      "crawlTime": "2026-04-18T08:00:27.807Z"
     },
     {
       "title": "武汉大学代表队荣获第二十三届“贸仲杯”国际商事仲裁模拟仲裁庭辩论赛季军",
@@ -1958,7 +1922,7 @@
       "category": "综合",
       "type": "competition",
       "source": "法学院",
-      "crawlTime": "2026-04-18T07:41:13.923Z"
+      "crawlTime": "2026-04-18T08:00:27.807Z"
     },
     {
       "title": "本科生院党总支组织党员参观“信仰的力量”主题展览",
@@ -1967,7 +1931,7 @@
       "category": "活动/文体",
       "type": "activity",
       "source": "本科生院",
-      "crawlTime": "2026-04-18T07:41:15.916Z"
+      "crawlTime": "2026-04-18T08:00:30.130Z"
     },
     {
       "title": "【一线传真】跨支部研学交流主题党日活动举行",
@@ -1976,7 +1940,7 @@
       "category": "活动/综合",
       "type": "activity",
       "source": "武汉大学新闻网",
-      "crawlTime": "2026-04-18T07:41:15.977Z"
+      "crawlTime": "2026-04-18T08:00:30.777Z"
     },
     {
       "title": "2025-2026学年第一学期计算机学院助教招募通知",
@@ -1985,7 +1949,7 @@
       "category": "活动/社团",
       "type": "activity",
       "source": "计算机学院",
-      "crawlTime": "2026-04-18T07:41:16.031Z"
+      "crawlTime": "2026-04-18T08:00:30.673Z"
     },
     {
       "title": "腾飞杯决赛：我院男篮斩获亚军，追平历史最佳成绩  查看详情",
@@ -1994,7 +1958,16 @@
       "category": "综合",
       "type": "competition",
       "source": "动力与机械学院",
-      "crawlTime": "2026-04-18T07:41:15.518Z"
+      "crawlTime": "2026-04-18T08:00:29.305Z"
+    },
+    {
+      "title": "我院学子在第21届CASC杯曼弗雷德·拉克斯（Manfred Lachs）国际空间法模拟法庭竞赛中取得佳绩",
+      "link": "https://fls.whu.edu.cn/info/1032/53151.htm",
+      "date": "2024-12-23",
+      "category": "综合",
+      "type": "competition",
+      "source": "外语学院",
+      "crawlTime": "2026-04-18T08:00:27.174Z"
     },
     {
       "title": "经济与管理学院第十届青年教师教学竞赛观摩通知",
@@ -2003,7 +1976,7 @@
       "category": "综合",
       "type": "competition",
       "source": "经管学院",
-      "crawlTime": "2026-04-18T07:41:12.821Z"
+      "crawlTime": "2026-04-18T08:00:26.835Z"
     },
     {
       "title": "武汉大学经济与管理学院关于开展第十届青年教师教学竞赛的通知",
@@ -2012,25 +1985,7 @@
       "category": "综合",
       "type": "competition",
       "source": "经管学院",
-      "crawlTime": "2026-04-18T07:41:12.821Z"
-    },
-    {
-      "title": "我院三位本科生入围南开大学史学论坛",
-      "link": "https://history.whu.edu.cn/info/1030/4803.htm",
-      "date": "2022-04-14",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "历史学院",
-      "crawlTime": "2026-04-18T07:41:20.188Z"
-    },
-    {
-      "title": "我院三位本科生入围北京师范大学第二届全国本科生励耘史学论坛",
-      "link": "https://history.whu.edu.cn/info/1030/4804.htm",
-      "date": "2021-10-14",
-      "category": "活动/学术",
-      "type": "activity",
-      "source": "历史学院",
-      "crawlTime": "2026-04-18T07:41:20.188Z"
+      "crawlTime": "2026-04-18T08:00:26.836Z"
     },
     {
       "title": "我院学子喜获第十六届“挑战杯”全国竞赛二等奖",
@@ -2039,7 +1994,7 @@
       "category": "综合",
       "type": "competition",
       "source": "历史学院",
-      "crawlTime": "2026-04-18T07:41:17.653Z"
+      "crawlTime": "2026-04-18T08:00:32.592Z"
     },
     {
       "title": "我院学子荣获湖北省第十二届“挑战杯”特等奖",
@@ -2048,7 +2003,7 @@
       "category": "综合",
       "type": "competition",
       "source": "历史学院",
-      "crawlTime": "2026-04-18T07:41:17.653Z"
+      "crawlTime": "2026-04-18T08:00:32.592Z"
     }
   ]
 }
