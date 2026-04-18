@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# 数据文件（可选：如果不想上传数据）
+# competitions.json
+# messages.json
+
+# 下载的文件
+downloaded_pdfs/
+
+# Claude配置
+.claude/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.log

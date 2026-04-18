@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>武大校园闪现 - WHU Campus Flash</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=ZCOOL+XiaoWei&display=swap');
+
+        :root {
+            --whu-main: #004a32;
+            --whu-main-dark: #003322;
+            --whu-sakura: #ffb7c5;
+            --whu-accent: #f59e0b;
+            --glass: rgba(255, 255, 255, 0.72);
+            --glass-strong: rgba(255, 255, 255, 0.86);
+            --shadow: 0 28px 60px -24px rgba(0, 74, 50, 0.22);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+            background: radial-gradient(1200px 800px at 10% -20%, rgba(0, 74, 50, 0.12), transparent 60%),
+                radial-gradient(900px 700px at 110% 10%, rgba(245, 158, 11, 0.12), transparent 55%),
+                linear-gradient(135deg, #f5f7f6 0%, #e9f1ed 100%);
+            color: #1a2e26;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(var(--whu-main) 0.5px, transparent 0.5px);
+            background-size: 30px 30px;
+            opacity: 0.03;
+            z-index: -1;
+        }
+
+        .whu-green {
+            color: var(--whu-main);
+        }
+
+        .whu-bg-green {
+            background: linear-gradient(135deg, var(--whu-main) 0%, var(--whu-main-dark) 100%);
+        }
+
+        .font-art {
+            font-family: 'ZCOOL XiaoWei', serif;
+        }
+
+        .sakura-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .sakura {
+            position: absolute;
+            background: var(--whu-sakura);
+            border-radius: 100% 0 100% 0;
+            opacity: 0.6;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translate(0, -10px) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translate(100px, 100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .card-3d {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .card-3d:hover {
+            transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-magnetic {
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .btn-magnetic:hover {
+            transform: scale(1.05);
+        }
+
+        .sidebar-item {
+            position: relative;
+            overflow: hidden;
+            border-left: 4px solid transparent;
+        }
+
+        .sidebar-item.active {
+            border-left-color: var(--whu-accent);
+            background: linear-gradient(90deg, rgba(0, 74, 50, 0.1) 0%, transparent 100%);
+            color: var(--whu-main);
+            font-weight: 900;
+        }
+
+        .glass-nav {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 74, 50, 0.05);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.78);
+            border: 1px solid rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(0, 74, 50, 0.08);
+            background: var(--glass-strong);
+            box-shadow: 0 14px 30px -18px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn-soft {
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid rgba(0, 74, 50, 0.12);
+            color: rgba(0, 74, 50, 0.92);
+        }
+
+        .btn-soft:hover {
+            background: rgba(255, 255, 255, 0.92);
+        }
+
+        .feed-item {
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.68);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+        }
+
+        .feed-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 22px 50px -30px rgba(0, 0, 0, 0.35);
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .feed-item.active {
+            border-color: rgba(245, 158, 11, 0.55);
+            box-shadow: 0 26px 62px -34px rgba(245, 158, 11, 0.35);
+        }
+
+        .feed-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 999px;
+            background: rgba(0, 74, 50, 0.18);
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 10px 25px -18px rgba(0, 0, 0, 0.4);
+        }
+
+        .feed-dot.new {
+            background: rgba(239, 68, 68, 0.9);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: var(--whu-main);
+            border-radius: 10px;
+        }
+
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: none;
+            z-index: 40;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen pb-12 flex flex-col">
+    <div class="sakura-container" id="sakuraContainer"></div>
+
+    <!-- Header -->
+    <header class="whu-bg-green text-white py-10 md:py-12 shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: radial-gradient(#fff 0.6px, transparent 0.6px); background-size: 28px 28px;">
+        </div>
+        <div class="absolute -bottom-40 -left-40 w-[520px] h-[520px] bg-white/10 rounded-full blur-3xl"></div>
+        <div class="absolute -top-44 -right-44 w-[520px] h-[520px] bg-white/10 rounded-full blur-3xl"></div>
+        <div class="container mx-auto px-6 relative z-20">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-black mb-3 tracking-tighter font-art">
+                        武大校园闪现 <span class="text-yellow-300 drop-shadow-lg">🌸</span>
+                    </h1>
+                    <p class="text-green-100/90 text-sm md:text-lg font-medium tracking-[0.24em] uppercase">
+                        WHU Campus Flash
+                    </p>
+                    <div class="mt-5 flex flex-wrap justify-center md:justify-start gap-2">
+                        <div class="chip text-[11px] text-white/90 bg-white/10 border-white/20">
+                            <i class="fas fa-sparkles text-yellow-300"></i>
+                            <span class="font-bold">竞赛 + 活动</span>
+                        </div>
+                        <div class="chip text-[11px] text-white/90 bg-white/10 border-white/20">
+                            <i class="fas fa-rotate text-white/90"></i>
+                            <span class="font-bold">全校多源聚合</span>
+                        </div>
+                        <div class="chip text-[11px] text-white/90 bg-white/10 border-white/20">
+                            <i class="fas fa-users text-white/90"></i>
+                            <span class="font-bold">组队互动</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button id="guideBtn"
+                        class="btn-magnetic bg-white/10 backdrop-blur-md text-white border border-white/20 px-6 py-2.5 rounded-2xl font-bold hover:bg-white hover:text-green-900 transition-all flex items-center gap-2 shadow-xl">
+                        <i class="fas fa-paper-plane text-yellow-400"></i> 指南
+                    </button>
+                    <button id="calendarBtn"
+                        class="btn-magnetic bg-blue-600 text-white px-6 py-2.5 rounded-2xl font-bold shadow-2xl hover:bg-blue-500 transition-all flex items-center gap-2">
+                        <i class="fas fa-calendar-alt"></i> 竞赛历
+                    </button>
+                    <button id="statsBtn"
+                        class="btn-magnetic bg-teal-600 text-white px-6 py-2.5 rounded-2xl font-bold shadow-2xl hover:bg-teal-500 transition-all flex items-center gap-2">
+                        <i class="fas fa-chart-pie"></i> 数据洞察
+                    </button>
+                    <button id="policyBtn"
+                        class="btn-magnetic bg-white/10 backdrop-blur-md text-white border border-white/20 px-6 py-2.5 rounded-2xl font-bold hover:bg-white hover:text-green-900 transition-all flex items-center gap-2 shadow-xl">
+                        <i class="fas fa-scale-balanced text-yellow-300"></i> 加分细则
+                    </button>
+                    <button id="roadmapBtn"
+                        class="btn-magnetic bg-indigo-600 text-white px-6 py-2.5 rounded-2xl font-bold shadow-2xl hover:bg-indigo-500 transition-all flex items-center gap-2">
+                        <i class="fas fa-map-signs"></i> 图谱
+                    </button>
+                    <button id="showFavoritesBtn"
+                        class="btn-magnetic bg-yellow-400 text-yellow-950 px-6 py-2.5 rounded-2xl font-bold shadow-2xl hover:bg-yellow-300 transition-all flex items-center gap-2"
+                        aria-pressed="false">
+                        <i class="fas fa-star"></i> <span id="favModeLabel">收藏夹</span> (<span id="favCount">0</span>)
+                    </button>
+                    <button id="randomBtn"
+                        class="btn-magnetic bg-white text-green-900 px-6 py-2.5 rounded-2xl font-bold shadow-xl hover:shadow-2xl transition-all flex items-center gap-2">
+                        <i class="fas fa-magic"></i> 试手气
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-6 py-12 flex flex-col md:flex-row gap-10 flex-grow relative z-20">
+        <aside class="w-full md:w-72 shrink-0 space-y-8">
+            <div class="glass-nav rounded-3xl shadow-xl p-6 sticky top-28 border border-white/50">
+                <h3 class="text-sm font-black text-gray-800 uppercase tracking-widest mb-4">内容类型</h3>
+                <nav class="space-y-2 mb-8" id="typeFilters">
+                    <button
+                        class="type-item active w-full text-left px-5 py-4 rounded-2xl font-bold transition-all flex items-center gap-3 group sidebar-item"
+                        data-type="all">
+                        <i class="fas fa-layer-group w-5 text-center"></i>
+                        <span class="flex-1">全部内容</span>
+                        <span id="typeCountAll" class="text-[11px] font-black text-gray-400">0</span>
+                    </button>
+                    <button
+                        class="type-item w-full text-left px-5 py-4 rounded-2xl font-bold text-gray-500 hover:text-green-800 transition-all flex items-center gap-3 sidebar-item"
+                        data-type="competition">
+                        <i class="fas fa-trophy w-5 text-center text-yellow-500"></i> <span>竞赛</span>
+                        <span id="typeCountCompetition" class="ml-auto text-[11px] font-black text-gray-300">0</span>
+                    </button>
+                    <button
+                        class="type-item w-full text-left px-5 py-4 rounded-2xl font-bold text-gray-500 hover:text-green-800 transition-all flex items-center gap-3 sidebar-item"
+                        data-type="activity">
+                        <i class="fas fa-campground w-5 text-center text-teal-500"></i> <span>校园活动</span>
+                        <span id="typeCountActivity" class="ml-auto text-[11px] font-black text-gray-300">0</span>
+                    </button>
+                </nav>
+                <h3 class="text-sm font-black text-gray-800 uppercase tracking-widest mb-6">赛道分类</h3>
+                <nav class="space-y-2" id="categoryFilters">
+                    <button
+                        class="sidebar-item active w-full text-left px-5 py-4 rounded-2xl font-bold transition-all flex items-center gap-3 group"
+                        data-category="全部">
+                        <i class="fas fa-th-large w-5 text-center"></i> <span>全部领域</span>
+                    </button>
+                    <button
+                        class="sidebar-item w-full text-left px-5 py-4 rounded-2xl font-bold text-gray-500 hover:text-green-800 transition-all flex items-center gap-3"
+                        data-category="IT/计算机">
+                        <i class="fas fa-terminal w-5 text-center text-blue-500"></i> <span>IT · 计算机</span>
+                    </button>
+                    <button
+                        class="sidebar-item w-full text-left px-5 py-4 rounded-2xl font-bold text-gray-500 hover:text-green-800 transition-all flex items-center gap-3"
+                        data-category="双创/经管">
+                        <i class="fas fa-rocket w-5 text-center text-green-500"></i> <span>双创 · 经管</span>
+                    </button>
+                    <button
+                        class="sidebar-item w-full text-left px-5 py-4 rounded-2xl font-bold text-gray-500 hover:text-green-800 transition-all flex items-center gap-3"
+                        data-category="数理/基础">
+                        <i class="fas fa-infinity w-5 text-center text-purple-500"></i> <span>数理 · 基础</span>
+                    </button>
+                    <button
+                        class="sidebar-item w-full text-left px-5 py-4 rounded-2xl font-bold text-gray-500 hover:text-green-800 transition-all flex items-center gap-3"
+                        data-category="语言/人文">
+                        <i class="fas fa-feather-alt w-5 text-center text-red-400"></i> <span>语言 · 人文</span>
+                    </button>
+                    <button
+                        class="sidebar-item w-full text-left px-5 py-4 rounded-2xl font-bold text-gray-500 hover:text-green-800 transition-all flex items-center gap-3"
+                        data-category="设计/艺术">
+                        <i class="fas fa-paint-brush w-5 text-center text-pink-400"></i> <span>设计 · 艺术</span>
+                    </button>
+                    <button
+                        class="sidebar-item w-full text-left px-5 py-4 rounded-2xl font-bold text-gray-500 hover:text-green-800 transition-all flex items-center gap-3"
+                        data-category="电子/信息">
+                        <i class="fas fa-microchip w-5 text-center text-orange-500"></i> <span>电子 · 信息</span>
+                    </button>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="flex-1 space-y-10">
+            <div class="glass-nav rounded-3xl shadow-2xl p-5 sticky top-6 z-40 border border-white/50">
+                <div class="relative group">
+                    <input type="text" id="searchInput" placeholder="搜索竞赛 / 校园活动 / 院系..."
+                        class="w-full pl-14 pr-6 py-5 bg-white/50 border-none rounded-2xl focus:ring-4 focus:ring-green-600/10 focus:bg-white transition-all text-xl font-bold outline-none">
+                    <i
+                        class="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-gray-300 text-2xl group-focus-within:text-green-600 transition-all"></i>
+                </div>
+                <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+                    <div class="flex flex-wrap gap-2">
+                        <div class="chip text-[11px]">
+                            <i class="fas fa-layer-group text-green-700"></i>
+                            <span class="font-bold text-gray-700">当前：</span>
+                            <span id="currentCategoryPill" class="font-black text-gray-900">全部领域</span>
+                        </div>
+                        <div class="chip text-[11px]">
+                            <i class="fas fa-clock text-gray-500"></i>
+                            <span class="font-bold text-gray-500">Update：</span>
+                            <span id="lastUpdatePill" class="font-black text-gray-800">--:--</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-2">
+                        <button id="freshQuickToggle" class="chip btn-soft text-[11px] font-black">
+                            <i class="fas fa-bolt text-orange-500"></i>
+                            <span>仅看 3 天内</span>
+                        </button>
+                        <button id="favQuickToggle" class="chip btn-soft text-[11px] font-black">
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <span>仅看收藏</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center px-4">
+                <h2 class="text-3xl font-black text-gray-800 tracking-tight" id="currentCategoryTitle">全部领域</h2>
+                <div id="lastUpdate" class="text-[11px] text-gray-400 font-medium tracking-widest uppercase">Update:
+                    --:--</div>
+            </div>
+
+            <div class="lg:hidden">
+                <div id="competitionGrid" class="grid grid-cols-1 gap-8 min-h-[500px]"></div>
+            </div>
+
+            <div class="hidden lg:grid lg:grid-cols-12 gap-8 min-h-[520px]">
+                <div class="lg:col-span-7 space-y-4">
+                    <div class="px-1 flex items-center justify-between">
+                        <div class="text-xs font-black tracking-widest uppercase text-gray-400">Feed</div>
+                        <div id="feedCount" class="text-xs font-black text-gray-500">0</div>
+                    </div>
+                    <div id="feedList" class="space-y-3"></div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div id="detailPanel"
+                        class="glass-card rounded-3xl shadow-2xl border border-white/70 p-8 sticky top-28">
+                        <div class="text-xs font-black tracking-widest uppercase text-gray-400">Preview</div>
+                        <div class="mt-4 text-2xl font-black text-gray-900 leading-tight">选中一条内容</div>
+                        <div class="mt-3 text-sm text-gray-500 leading-relaxed">
+                            左侧点一条竞赛或活动，这里会显示详情与快捷操作。
+                        </div>
+                        <div class="mt-6 flex gap-2">
+                            <div class="chip text-[11px]"><i class="fas fa-mouse-pointer text-gray-400"></i><span
+                                    class="font-black text-gray-700">点击 Feed</span></div>
+                            <div class="chip text-[11px]"><i class="fas fa-search text-gray-400"></i><span
+                                    class="font-black text-gray-700">搜索过滤</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="modal" class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4 z-50 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl relative">
+            <h3 class="text-2xl font-bold whu-green mb-4">为您推荐 ✨</h3>
+            <div id="modalContent"></div>
+            <div class="mt-8 flex justify-end gap-4">
+                <button onclick="closeModal()" class="px-6 py-2 text-gray-500 font-medium">关闭</button>
+                <a id="modalLink" href="#" target="_blank"
+                    class="px-6 py-2 whu-bg-green text-white rounded-xl font-bold">查看详情</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="successModal"
+        class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4 z-50 backdrop-blur-sm overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-8 shadow-2xl relative my-8">
+            <button onclick="closeSuccessModal()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-600"><i
+                    class="fas fa-times text-xl"></i></button>
+            <div id="successModalContent"></div>
+        </div>
+    </div>
+
+    <div id="guideModal"
+        class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4 z-50 backdrop-blur-sm overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-8 shadow-2xl relative my-8">
+            <button onclick="closeGuide()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-600"><i
+                    class="fas fa-times text-xl"></i></button>
+            <h3 class="text-2xl font-bold whu-green mb-6">🌸 武大校园参与指南 🌸</h3>
+            <div class="prose prose-green space-y-6 text-gray-600 text-sm leading-relaxed">
+                <section>
+                    <h4 class="font-bold whu-green mb-2">第一步：先收藏再行动</h4>
+                    <p>刷到想参加的竞赛/活动，先点星标收藏，再决定要不要投入时间。</p>
+                </section>
+                <section>
+                    <h4 class="font-bold whu-green mb-2">第二步：竞赛要分工，活动要复盘</h4>
+                    <p>竞赛：把任务拆成“产出物”，固定节奏；活动：用 5 行复盘让每次参加都变成积累。</p>
+                </section>
+                <section>
+                    <h4 class="font-bold whu-green mb-2">第三步：大胆提问与连接</h4>
+                    <p>讲座/论坛结束别急着走：问 1 个具体问题、加 1 位同学、留 1 个后续动作。</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div id="calendarModal"
+        class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4 z-50 backdrop-blur-sm overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-4xl w-full p-8 shadow-2xl relative my-8">
+            <button onclick="closeCalendar()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-600"><i
+                    class="fas fa-times text-xl"></i></button>
+            <h3 class="text-3xl font-black whu-green mb-8 flex items-center gap-3 font-art"><i
+                    class="fas fa-calendar-day text-blue-500"></i> 珞珈校园时间轴</h3>
+            <div id="calendarContent" class="space-y-10"></div>
+        </div>
+    </div>
+
+    <div id="roadmapModal"
+        class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4 z-50 backdrop-blur-sm overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-4xl w-full p-8 shadow-2xl relative my-8">
+            <button onclick="closeRoadmap()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-600"><i
+                    class="fas fa-times text-xl"></i></button>
+            <h3 class="text-3xl font-black whu-green mb-8 flex items-center gap-3 font-art"><i
+                    class="fas fa-route text-indigo-500"></i> 四年竞赛通关图谱</h3>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+                <div
+                    class="bg-indigo-50/50 p-6 rounded-2xl border border-indigo-100 flex flex-col items-center text-center">
+                    <div
+                        class="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center font-black mb-4">
+                        大一</div>
+                    <h4 class="font-bold text-gray-800 mb-2 text-sm">萌新探索期</h4>
+                    <p class="text-[10px] text-gray-500">重在参与，推荐英语、创意类竞赛。</p>
+                </div>
+                <div
+                    class="bg-indigo-50/50 p-6 rounded-2xl border border-indigo-100 flex flex-col items-center text-center">
+                    <div
+                        class="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center font-black mb-4">
+                        大二</div>
+                    <h4 class="font-bold text-gray-800 mb-2 text-sm">技能成型期</h4>
+                    <p class="text-[10px] text-gray-500">主攻数模、大创等校内/省赛。</p>
+                </div>
+                <div
+                    class="bg-indigo-50/50 p-6 rounded-2xl border border-indigo-100 flex flex-col items-center text-center">
+                    <div
+                        class="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center font-black mb-4">
+                        大三</div>
+                    <h4 class="font-bold text-gray-800 mb-2 text-sm">国赛冲刺期</h4>
+                    <p class="text-[10px] text-gray-500">冲击 A 类赛事国奖，组建跨院强队。</p>
+                </div>
+                <div
+                    class="bg-indigo-50/50 p-6 rounded-2xl border border-indigo-100 flex flex-col items-center text-center">
+                    <div
+                        class="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center font-black mb-4">
+                        大四</div>
+                    <h4 class="font-bold text-gray-800 mb-2 text-sm">经验传承期</h4>
+                    <p class="text-[10px] text-gray-500">作为导师指导学弟学妹，整理文档。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="teamModal" class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4 z-50 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl relative">
+            <button onclick="closeTeamModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600"><i
+                    class="fas fa-times text-xl"></i></button>
+            <h3 class="text-2xl font-bold whu-green mb-4 flex items-center gap-2"><i class="fas fa-users"></i> 组队互动空间
+            </h3>
+            <div class="space-y-4">
+                <div class="bg-blue-50 p-4 rounded-xl border border-blue-100">
+                    <p class="text-xs text-blue-800 font-bold mb-2">全校实时动态：</p>
+                    <div id="teammateList" class="space-y-2 max-h-60 overflow-y-auto custom-scrollbar"></div>
+                </div>
+                <div class="border-t pt-4 space-y-3">
+                    <div class="flex gap-2">
+                        <input id="teamName" type="text" placeholder="你的称呼"
+                            class="w-1/3 p-2 border border-gray-100 rounded-xl text-xs outline-none focus:ring-1 focus:ring-green-600">
+                        <input id="teamMajor" type="text" placeholder="所属院系"
+                            class="w-2/3 p-2 border border-gray-100 rounded-xl text-xs outline-none focus:ring-1 focus:ring-green-600">
+                    </div>
+                    <textarea id="teamInput" placeholder="发布你的组队意向（如：寻找前端/BP手，联系方式...）"
+                        class="w-full p-3 border border-gray-100 rounded-xl focus:ring-2 focus:ring-green-600 outline-none h-20 text-xs"></textarea>
+                    <button onclick="postTeamMsg()"
+                        class="w-full mt-2 py-3 whu-bg-green text-white rounded-xl font-bold shadow-lg flex items-center justify-center gap-2">
+                        <i class="fas fa-paper-plane"></i> 发布意向
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="statsModal"
+        class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4 z-50 backdrop-blur-sm overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-4xl w-full p-8 shadow-2xl relative my-8">
+            <button onclick="closeStats()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-600"><i
+                    class="fas fa-times text-xl"></i></button>
+            <h3 class="text-3xl font-black whu-green mb-8 flex items-center gap-3 font-art"><i
+                    class="fas fa-chart-line text-teal-500"></i> 珞珈校园数据洞察</h3>
+            <div class="mb-10 space-y-4">
+                <h4 class="font-bold text-gray-800 flex items-center gap-2"><i
+                        class="fas fa-sliders-h text-teal-500"></i> 内容类型分布</h4>
+                <div id="typeChart" class="grid grid-cols-1 md:grid-cols-3 gap-3"></div>
+            </div>
+            <div id="statsContent" class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="space-y-6">
+                    <h4 class="font-bold text-gray-800 flex items-center gap-2"><i
+                            class="fas fa-pie-chart text-orange-400"></i> 赛道热度分布</h4>
+                    <div id="categoryChart" class="space-y-3"></div>
+                </div>
+                <div class="space-y-6">
+                    <h4 class="font-bold text-gray-800 flex items-center gap-2"><i
+                            class="fas fa-university text-blue-400"></i> 院系活跃榜</h4>
+                    <div id="sourceChart" class="space-y-3 max-h-80 overflow-y-auto custom-scrollbar pr-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="policyModal"
+        class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4 z-50 backdrop-blur-sm overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-4xl w-full p-8 shadow-2xl relative my-8">
+            <button onclick="closePolicy()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-600"><i
+                    class="fas fa-times text-xl"></i></button>
+            <h3 class="text-3xl font-black whu-green mb-3 flex items-center gap-3 font-art"><i
+                    class="fas fa-scale-balanced text-yellow-500"></i> 加分细则入口</h3>
+            <div class="text-sm text-gray-500 leading-relaxed">
+                各学院“竞赛认定/综测加分/推免加分”细则分散在不同栏目，统一整理难度较高；这里提供官方入口与站内搜索，点开即可在官网查看最新版本。
+            </div>
+
+            <div class="mt-6 space-y-3">
+                <div class="flex flex-col md:flex-row gap-3">
+                    <input id="policySearchInput" type="text" placeholder="筛选学院（如：计、电气、经管、遥感）"
+                        class="flex-1 p-3 border border-gray-100 rounded-2xl text-sm outline-none focus:ring-2 focus:ring-green-600/20">
+                    <button onclick="resetPolicyFilter()"
+                        class="chip btn-soft justify-center text-[12px] font-black md:w-auto">
+                        <i class="fas fa-rotate-left text-gray-500"></i><span>重置</span>
+                    </button>
+                </div>
+                <div class="flex flex-wrap gap-2" id="policyKeywordChips">
+                    <button class="chip btn-soft text-[11px] font-black policy-keyword active"
+                        data-keyword="学科竞赛 认定 加分 综测 细则">竞赛认定</button>
+                    <button class="chip btn-soft text-[11px] font-black policy-keyword"
+                        data-keyword="推免 综测 评定 办法 细则">推免综测</button>
+                    <button class="chip btn-soft text-[11px] font-black policy-keyword"
+                        data-keyword="奖学金 评优 综测 加分 办法">奖学金评优</button>
+                </div>
+                <div id="policyStatus" class="text-[11px] text-gray-400 font-bold tracking-widest uppercase"></div>
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <h4 class="font-black text-gray-800 flex items-center gap-2"><i
+                                class="fas fa-link text-green-600"></i> 官方入口</h4>
+                    </div>
+                    <div class="space-y-3" id="policyOfficialList"></div>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <h4 class="font-black text-gray-800 flex items-center gap-2"><i
+                                class="fas fa-magnifying-glass text-blue-600"></i> 学院站内搜索</h4>
+                        <div class="text-[11px] font-bold text-gray-400">推荐：先用站内搜定位 PDF/通知</div>
+                    </div>
+                    <div class="space-y-3" id="policyCollegeList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="shareModal" class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4 z-50 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-0 overflow-hidden shadow-2xl relative">
+            <div id="shareCard" class="whu-bg-green p-8 text-white relative">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-5 rounded-full -mr-16 -mt-16 blur-2xl">
+                </div>
+                <div class="relative z-10">
+                    <div class="text-[10px] opacity-70 tracking-widest uppercase mb-2">WHU Campus Flash</div>
+                    <h4 id="shareTitle" class="text-xl font-black leading-tight mb-4 font-art"></h4>
+                    <div class="flex justify-between items-end">
+                        <div class="space-y-1">
+                            <div id="shareCategory"
+                                class="text-[10px] font-bold bg-white/20 px-2 py-0.5 rounded inline-block"></div>
+                            <div id="shareDate" class="text-[9px] opacity-60"></div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-[8px] opacity-50">扫码或访问</div>
+                            <div class="font-bold text-[10px]">武大校园闪现</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-6 bg-gray-50 flex flex-col gap-3">
+                <button onclick="copyShareLink()"
+                    class="w-full py-3 bg-white border border-gray-200 text-gray-700 rounded-xl font-bold text-sm shadow-sm flex items-center justify-center gap-2">
+                    <i class="far fa-copy"></i> 复制链接
+                </button>
+                <button onclick="closeShare()" class="w-full py-3 text-gray-400 font-bold text-sm">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="backToTop"
+        class="w-12 h-12 whu-bg-green text-white rounded-full shadow-2xl hover:scale-110 transition-all flex items-center justify-center"><i
+            class="fas fa-arrow-up"></i></button>
+
+    <script>
+        let allData = [];
+        const grid = document.getElementById('competitionGrid');
+        const feedList = document.getElementById('feedList');
+        const detailPanel = document.getElementById('detailPanel');
+        const feedCountEl = document.getElementById('feedCount');
+        const countSpan = document.getElementById('count');
+        const searchInput = document.getElementById('searchInput');
+        const categoryBtns = document.querySelectorAll('#categoryFilters .sidebar-item');
+        const typeBtns = document.querySelectorAll('#typeFilters .type-item');
+        let showFavoritesOnly = false;
+        let activeType = 'all';
+        let showFreshOnly = false;
+        let selectedLink = '';
+        let lastFilteredData = [];
+        let policyKeyword = '学科竞赛 认定 加分 综测 细则';
+
+        function renderSkeleton() {
+            grid.innerHTML = Array.from({ length: 9 }).map(() => `
+                <div class="glass-card rounded-3xl shadow-xl p-8 animate-pulse border border-white">
+                    <div class="flex gap-2 mb-5">
+                        <div class="h-5 w-20 bg-gray-200 rounded-lg"></div>
+                        <div class="h-5 w-16 bg-gray-200 rounded-lg"></div>
+                    </div>
+                    <div class="h-6 bg-gray-200 rounded-xl mb-3"></div>
+                    <div class="h-6 bg-gray-200 rounded-xl w-4/5 mb-6"></div>
+                    <div class="h-4 bg-gray-200 rounded-lg w-2/5 mb-6"></div>
+                    <div class="flex gap-2">
+                        <div class="h-10 bg-gray-200 rounded-2xl flex-1"></div>
+                        <div class="h-10 bg-gray-200 rounded-2xl w-12"></div>
+                    </div>
+                </div>
+            `).join('');
+
+            if (feedList) {
+                feedList.innerHTML = Array.from({ length: 10 }).map(() => `
+                    <div class="feed-item rounded-2xl p-5 animate-pulse">
+                        <div class="flex items-center gap-3">
+                            <div class="feed-dot"></div>
+                            <div class="h-4 bg-gray-200 rounded-lg w-24"></div>
+                            <div class="h-4 bg-gray-200 rounded-lg w-16"></div>
+                        </div>
+                        <div class="mt-4 h-5 bg-gray-200 rounded-xl w-4/5"></div>
+                        <div class="mt-2 h-5 bg-gray-200 rounded-xl w-3/5"></div>
+                        <div class="mt-4 h-4 bg-gray-200 rounded-lg w-2/5"></div>
+                    </div>
+                `).join('');
+            }
+
+            if (detailPanel) {
+                detailPanel.innerHTML = `
+                    <div class="animate-pulse">
+                        <div class="h-3 bg-gray-200 rounded w-24"></div>
+                        <div class="mt-4 h-8 bg-gray-200 rounded-2xl"></div>
+                        <div class="mt-3 h-5 bg-gray-200 rounded-xl w-5/6"></div>
+                        <div class="mt-2 h-5 bg-gray-200 rounded-xl w-4/6"></div>
+                        <div class="mt-6 flex gap-2">
+                            <div class="h-10 bg-gray-200 rounded-2xl flex-1"></div>
+                            <div class="h-10 bg-gray-200 rounded-2xl w-14"></div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        function syncTopPills(lastUpdateText) {
+            const pill = document.getElementById('lastUpdatePill');
+            if (pill) pill.innerText = lastUpdateText || '--:--';
+        }
+
+        function syncFavModeUI() {
+            const favBtn = document.getElementById('showFavoritesBtn');
+            const quick = document.getElementById('favQuickToggle');
+            const label = document.getElementById('favModeLabel');
+
+            if (favBtn) {
+                favBtn.setAttribute('aria-pressed', showFavoritesOnly ? 'true' : 'false');
+                favBtn.classList.toggle('bg-yellow-400', !showFavoritesOnly);
+                favBtn.classList.toggle('bg-white', showFavoritesOnly);
+                favBtn.classList.toggle('text-yellow-950', !showFavoritesOnly);
+                favBtn.classList.toggle('text-green-900', showFavoritesOnly);
+                favBtn.classList.toggle('border', showFavoritesOnly);
+                favBtn.classList.toggle('border-white/30', showFavoritesOnly);
+            }
+
+            if (label) label.innerText = showFavoritesOnly ? '收藏夹 · 开' : '收藏夹';
+            if (quick) {
+                quick.classList.toggle('bg-white', showFavoritesOnly);
+                quick.classList.toggle('border-yellow-200', showFavoritesOnly);
+                quick.classList.toggle('text-yellow-900', showFavoritesOnly);
+                quick.classList.toggle('bg-white/70', !showFavoritesOnly);
+            }
+        }
+
+        async function init() {
+            try {
+                renderSkeleton();
+                const response = await fetch('competitions.json');
+                const result = await response.json();
+                allData = result.data;
+                document.getElementById('lastUpdate').innerText = `Update: ${result.lastUpdate}`;
+                syncTopPills(result.lastUpdate);
+                const total = allData.length;
+                const competitions = allData.filter(i => (i.type || 'competition') === 'competition').length;
+                const activities = allData.filter(i => (i.type || 'competition') === 'activity').length;
+                const allEl = document.getElementById('typeCountAll');
+                const cEl = document.getElementById('typeCountCompetition');
+                const aEl = document.getElementById('typeCountActivity');
+                if (allEl) allEl.innerText = total;
+                if (cEl) cEl.innerText = competitions;
+                if (aEl) aEl.innerText = activities;
+                filter();
+                loadTeamMsgs();
+            } catch (err) {
+                grid.innerHTML = '<div class="col-span-full text-center py-20 text-gray-400 font-bold">正在抓取最新数据...</div>';
+            }
+        }
+
+        function render(data) {
+            const favorites = JSON.parse(localStorage.getItem('whu_favs') || '[]');
+            // 如果 countSpan 不存在（可能在 header 里没定义），先检查
+            const countEl = document.getElementById('favCount');
+            if (countEl) countEl.innerText = favorites.length;
+            syncFavModeUI();
+
+            if (data.length === 0) {
+                const emptyHtml = showFavoritesOnly
+                    ? '<div class="col-span-full text-center py-20 text-gray-400 font-bold">收藏夹是空的：先点星标收藏几项吧</div>'
+                    : '<div class="col-span-full text-center py-20 text-gray-400 font-bold">没有找到匹配项</div>';
+                grid.innerHTML = emptyHtml;
+                if (feedList) feedList.innerHTML = emptyHtml;
+                if (feedCountEl) feedCountEl.innerText = '0';
+                if (detailPanel) {
+                    detailPanel.innerHTML = `
+                        <div class="text-xs font-black tracking-widest uppercase text-gray-400">Preview</div>
+                        <div class="mt-4 text-2xl font-black text-gray-900 leading-tight">暂无内容</div>
+                        <div class="mt-3 text-sm text-gray-500 leading-relaxed">调整筛选条件再试试。</div>
+                    `;
+                }
+                return;
+            }
+
+            grid.innerHTML = data.map((item, index) => {
+                const pubDate = new Date(item.date);
+                const today = new Date();
+                const isNew = (today - pubDate) < (3 * 24 * 60 * 60 * 1000);
+                const isFav = favorites.includes(item.link);
+                const type = item.type || 'competition';
+                const typeBadge = type === 'activity'
+                    ? '<span class="px-2 py-1 bg-teal-600 text-white text-[9px] font-black rounded-lg shadow-sm">校园活动</span>'
+                    : '<span class="px-2 py-1 bg-yellow-500 text-white text-[9px] font-black rounded-lg shadow-sm">竞赛</span>';
+                const primaryLabel = type === 'activity' ? '参加攻略' : '秘籍';
+
+                let countdownHtml = '';
+                if (item.date !== '近期' && !isNaN(pubDate)) {
+                    const diffDays = Math.floor((today - pubDate) / (1000 * 60 * 60 * 24));
+                    const remaining = 90 - diffDays;
+                    if (remaining > 0) {
+                        const colorClass = remaining < 15 ? 'text-red-600 bg-red-50' : 'text-orange-600 bg-orange-50';
+                        countdownHtml = `<div class="mt-4 text-[10px] font-bold ${colorClass} px-2 py-1 rounded border">剩余 ${remaining} 天</div>`;
+                    } else {
+                        countdownHtml = `<div class="mt-4 text-[10px] font-bold text-gray-400 bg-gray-50 px-2 py-1 rounded border">已结束</div>`;
+                    }
+                } else {
+                    countdownHtml = type === 'activity'
+                        ? `<div class="mt-4 text-[10px] font-bold text-teal-700 bg-teal-50 px-2 py-1 rounded border">近期活动</div>`
+                        : `<div class="mt-4 text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded border animate-bounce">火热报名</div>`;
+                }
+
+                return `
+                <div class="glass-card rounded-3xl shadow-xl border border-white/70 p-8 card-3d flex flex-col justify-between relative animate-fade-in" style="animation-delay: ${index * 0.05}s">
+                    ${isNew ? '<span class="absolute -top-3 -right-3 bg-red-500 text-white text-[10px] font-black px-3 py-1 rounded-full shadow-2xl z-20">NEW</span>' : ''}
+                    <div class="absolute top-6 right-6 flex gap-2 z-10">
+                        <button onclick="shareAsCardByLink('${escJsSingleQuote(item.link)}')" class="p-2 text-gray-300 hover:text-blue-600 transition-colors"><i class="fas fa-share-alt"></i></button>
+                        <button onclick="toggleFavorite('${item.link}')" class="p-2 focus:outline-none"><i class="${isFav ? 'fas text-yellow-400' : 'far text-gray-200'} fa-star text-xl"></i></button>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            ${typeBadge}
+                            <span class="px-2 py-1 bg-green-600 text-white text-[9px] font-black rounded-lg shadow-sm">${item.category}</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-500 text-[9px] font-black rounded-lg">${item.source}</span>
+                        </div>
+                        <h2 class="text-xl font-black text-gray-900 mb-4 leading-snug hover:text-green-700 cursor-pointer" onclick="window.open('${item.link}', '_blank')">${item.title}</h2>
+                        <div class="text-[10px] text-gray-500 mb-2 tracking-widest uppercase">Posted · ${item.date}</div>
+                        ${countdownHtml}
+                    </div>
+                    <div class="mt-8 flex gap-2">
+                        <button onclick="showSuccessGuideByLink('${escJsSingleQuote(item.link)}')" class="flex-1 py-3 whu-bg-green text-white rounded-2xl font-black text-[10px] shadow-lg hover:opacity-90">${primaryLabel}</button>
+                        <button onclick="showTeamInteraction('${item.title}')" class="px-4 py-3 bg-blue-50 text-blue-700 border border-blue-100 rounded-2xl font-black"><i class="fas fa-users"></i></button>
+                    </div>
+                </div>
+            `}).join('');
+
+            renderFeed(data, favorites);
+        }
+
+        function isRecentItem(item) {
+            if (!item || !item.date) return false;
+            if (item.date === '近期') return true;
+            const d = new Date(item.date);
+            if (isNaN(d)) return false;
+            const now = new Date();
+            return (now - d) < (3 * 24 * 60 * 60 * 1000);
+        }
+
+        function bucketForItem(item) {
+            if (!item) return '更早';
+            if (item.date === '近期') return '近期';
+            const d = new Date(item.date);
+            if (isNaN(d)) return '更早';
+            const now = new Date();
+            const diffDays = Math.floor((now - d) / (1000 * 60 * 60 * 24));
+            if (diffDays <= 3) return '3 天内';
+            if (diffDays <= 14) return '两周内';
+            return '更早';
+        }
+
+        function renderFeed(data, favorites) {
+            if (!feedList || !detailPanel) return;
+
+            if (feedCountEl) feedCountEl.innerText = `${data.length}`;
+
+            const preferred = selectedLink && data.some(i => i.link === selectedLink) ? selectedLink : (data[0] ? data[0].link : '');
+            selectedLink = preferred;
+
+            const groups = { '近期': [], '3 天内': [], '两周内': [], '更早': [] };
+            data.forEach(item => {
+                const b = bucketForItem(item);
+                (groups[b] || groups['更早']).push(item);
+            });
+
+            const order = ['近期', '3 天内', '两周内', '更早'].filter(k => (groups[k] || []).length > 0);
+            feedList.innerHTML = order.map(groupName => {
+                const header = `
+                    <div class="px-1 pt-4">
+                        <div class="flex items-center justify-between">
+                            <div class="text-[11px] font-black tracking-widest uppercase text-gray-400">${groupName}</div>
+                            <div class="text-[11px] font-black text-gray-400">${groups[groupName].length}</div>
+                        </div>
+                        <div class="mt-2 h-px bg-white/70"></div>
+                    </div>
+                `;
+                const itemsHtml = groups[groupName].map((item) => {
+                    const kind = item.type || 'competition';
+                    const isNew = isRecentItem(item);
+                    const active = item.link === selectedLink ? 'active' : '';
+                    const badge = kind === 'activity'
+                        ? '<span class="px-2 py-0.5 rounded-lg bg-teal-600 text-white text-[10px] font-black">活动</span>'
+                        : '<span class="px-2 py-0.5 rounded-lg bg-yellow-500 text-white text-[10px] font-black">竞赛</span>';
+                    const meta = `${item.source} · ${item.date}`;
+
+                    return `
+                        <button class="feed-item ${active} w-full text-left rounded-2xl p-5" onclick="selectItem('${escJsSingleQuote(item.link)}')">
+                            <div class="flex items-center gap-3">
+                                <div class="feed-dot ${isNew ? 'new' : ''}"></div>
+                                ${badge}
+                                <span class="text-[10px] font-black text-gray-500 bg-white/70 border border-white/80 px-2 py-0.5 rounded-lg">${item.category}</span>
+                                <span class="ml-auto text-[10px] font-bold text-gray-400 tracking-widest uppercase">${item.date === '近期' ? 'RECENT' : item.date}</span>
+                            </div>
+                            <div class="mt-3 text-lg font-black text-gray-900 leading-snug">${item.title}</div>
+                            <div class="mt-2 text-[11px] text-gray-500">${meta}</div>
+                        </button>
+                    `;
+                }).join('');
+                return header + itemsHtml;
+            }).join('');
+
+            renderDetail(selectedLink, favorites);
+        }
+
+        function escJsSingleQuote(value) {
+            return String(value || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+        }
+
+        function selectItem(link) {
+            selectedLink = link;
+            const favorites = JSON.parse(localStorage.getItem('whu_favs') || '[]');
+            renderFeed(lastFilteredData && lastFilteredData.length ? lastFilteredData : allData, favorites);
+        }
+
+        function renderDetail(link, favorites) {
+            if (!detailPanel) return;
+            const item = findItemByLink(link);
+            if (!item) return;
+            const kind = item.type || 'competition';
+            const isFav = favorites.includes(item.link);
+            const primaryLabel = kind === 'activity' ? '参加攻略' : '秘籍';
+
+            const badge = kind === 'activity'
+                ? '<span class="px-2 py-1 bg-teal-600 text-white text-[10px] font-black rounded-lg">校园活动</span>'
+                : '<span class="px-2 py-1 bg-yellow-500 text-white text-[10px] font-black rounded-lg">竞赛</span>';
+
+            detailPanel.innerHTML = `
+                <div class="flex items-center justify-between">
+                    <div class="text-xs font-black tracking-widest uppercase text-gray-400">Preview</div>
+                    <button class="chip btn-soft text-[11px] font-black" onclick="toggleFavoriteKeepSelected('${escJsSingleQuote(item.link)}')">
+                        <i class="fa-star ${isFav ? 'fas text-yellow-500' : 'far text-gray-400'}"></i>
+                        <span>${isFav ? '已收藏' : '收藏'}</span>
+                    </button>
+                </div>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    ${badge}
+                    <span class="px-2 py-1 bg-green-600 text-white text-[10px] font-black rounded-lg">${item.category}</span>
+                    <span class="px-2 py-1 bg-gray-100 text-gray-600 text-[10px] font-black rounded-lg">${item.source}</span>
+                    <span class="ml-auto text-[10px] font-bold text-gray-400 tracking-widest uppercase">${item.date === '近期' ? 'RECENT' : item.date}</span>
+                </div>
+                <div class="mt-4 text-3xl font-black text-gray-900 leading-tight">${item.title}</div>
+                <div class="mt-5 grid grid-cols-2 gap-3">
+                    <a class="chip btn-soft justify-center text-[12px] font-black" href="${item.link}" target="_blank">
+                        <i class="fas fa-arrow-up-right-from-square text-gray-500"></i>
+                        <span>打开原文</span>
+                    </a>
+                    <button class="chip btn-soft justify-center text-[12px] font-black" onclick="shareAsCardByLink('${escJsSingleQuote(item.link)}')">
+                        <i class="fas fa-share-alt text-gray-500"></i>
+                        <span>分享</span>
+                    </button>
+                    <button class="chip btn-soft justify-center text-[12px] font-black" onclick="downloadIcsByLink('${escJsSingleQuote(item.link)}')">
+                        <i class="fas fa-calendar-plus text-gray-500"></i>
+                        <span>加日程</span>
+                    </button>
+                    <button class="chip btn-soft justify-center text-[12px] font-black" onclick="openPolicyForSource('${escJsSingleQuote(item.source)}')">
+                        <i class="fas fa-scale-balanced text-gray-500"></i>
+                        <span>查细则</span>
+                    </button>
+                    <button class="chip btn-soft justify-center text-[12px] font-black" onclick="showSuccessGuideByLink('${escJsSingleQuote(item.link)}')">
+                        <i class="fas fa-compass text-gray-500"></i>
+                        <span>${primaryLabel}</span>
+                    </button>
+                    <button class="chip btn-soft justify-center text-[12px] font-black" onclick="showTeamInteraction('${escJsSingleQuote(item.title)}')">
+                        <i class="fas fa-users text-gray-500"></i>
+                        <span>组队</span>
+                    </button>
+                </div>
+                <div class="mt-6 p-5 rounded-3xl bg-white/60 border border-white/70">
+                    <div class="text-[10px] font-black tracking-widest uppercase text-gray-400">Quick Tip</div>
+                    <div class="mt-2 text-sm text-gray-700 leading-relaxed">
+                        ${kind === 'activity'
+                    ? '建议先收藏并加日程提醒；提前 10 分钟到场，活动结束写 5 行复盘。'
+                    : '建议先明确赛题与队伍分工；用 Git/飞书把产出节奏固定下来，避免临近截止崩盘。'}
+                    </div>
+                </div>
+            `;
+        }
+
+        function toggleFavoriteKeepSelected(link) {
+            selectedLink = link;
+            toggleFavorite(link);
+        }
+
+        function pad2(n) {
+            return String(n).padStart(2, '0');
+        }
+
+        function toIcsDate(dateStr) {
+            if (!dateStr || dateStr === '近期') return null;
+            const d = new Date(dateStr);
+            if (isNaN(d)) return null;
+            return `${d.getFullYear()}${pad2(d.getMonth() + 1)}${pad2(d.getDate())}`;
+        }
+
+        function escapeIcsText(text) {
+            return String(text || '')
+                .replace(/\\/g, '\\\\')
+                .replace(/\n/g, '\\n')
+                .replace(/,/g, '\\,')
+                .replace(/;/g, '\\;');
+        }
+
+        function downloadIcsByLink(link) {
+            const item = findItemByLink(link);
+            if (!item) return;
+            const dt = toIcsDate(item.date);
+            if (!dt) {
+                alert('该条目日期为“近期”或不可解析，暂无法生成日程。');
+                return;
+            }
+            const end = new Date(item.date);
+            end.setDate(end.getDate() + 1);
+            const dtEnd = `${end.getFullYear()}${pad2(end.getMonth() + 1)}${pad2(end.getDate())}`;
+
+            const uid = `${Date.now()}-${Math.random().toString(16).slice(2)}@whu-campus-flash`;
+            const now = new Date();
+            const dtStamp = `${now.getUTCFullYear()}${pad2(now.getUTCMonth() + 1)}${pad2(now.getUTCDate())}T${pad2(now.getUTCHours())}${pad2(now.getUTCMinutes())}${pad2(now.getUTCSeconds())}Z`;
+
+            const title = escapeIcsText(item.title);
+            const url = escapeIcsText(item.link);
+            const location = escapeIcsText(item.source);
+            const description = escapeIcsText(`${item.type === 'activity' ? '校园活动' : '竞赛'} · ${item.category}\\n${item.source}\\n${item.link}`);
+
+            const ics = [
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'PRODID:-//WHU Campus Flash//CN',
+                'CALSCALE:GREGORIAN',
+                'METHOD:PUBLISH',
+                'BEGIN:VEVENT',
+                `UID:${uid}`,
+                `DTSTAMP:${dtStamp}`,
+                `DTSTART;VALUE=DATE:${dt}`,
+                `DTEND;VALUE=DATE:${dtEnd}`,
+                `SUMMARY:${title}`,
+                `DESCRIPTION:${description}`,
+                `LOCATION:${location}`,
+                `URL:${url}`,
+                'END:VEVENT',
+                'END:VCALENDAR'
+            ].join('\r\n');
+
+            const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+            const a = document.createElement('a');
+            const safeName = (item.title || 'whu').replace(/[\\/:*?"<>|]/g, '').slice(0, 40);
+            a.href = URL.createObjectURL(blob);
+            a.download = `${safeName || 'whu-campus'}.ics`;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(a.href);
+        }
+
+        const POLICY_OFFICIAL = [
+            { name: '本科生院 · 学科竞赛', url: 'https://uc.whu.edu.cn/xkjs.htm' },
+            { name: '本科生院 · 官网', url: 'https://uc.whu.edu.cn/' },
+            { name: '武汉大学官网 · 首页', url: 'https://www.whu.edu.cn/' },
+            { name: '武汉大学新闻网 · 首页', url: 'https://news.whu.edu.cn/' }
+        ];
+
+        const POLICY_COLLEGES = [
+            { name: '本科生院', site: 'uc.whu.edu.cn', home: 'https://uc.whu.edu.cn/' },
+            { name: '计算机学院', site: 'cs.whu.edu.cn', home: 'https://cs.whu.edu.cn/' },
+            { name: '电子信息学院', site: 'eis.whu.edu.cn', home: 'http://eis.whu.edu.cn/' },
+            { name: '经管学院', site: 'ems.whu.edu.cn', home: 'https://ems.whu.edu.cn/' },
+            { name: '物理学院', site: 'physics.whu.edu.cn', home: 'https://physics.whu.edu.cn/' },
+            { name: '遥感学院', site: 'rsgis.whu.edu.cn', home: 'https://rsgis.whu.edu.cn/' },
+            { name: '生科学院', site: 'bio.whu.edu.cn', home: 'https://bio.whu.edu.cn/' },
+            { name: '外语学院', site: 'fls.whu.edu.cn', home: 'https://fls.whu.edu.cn/' },
+            { name: '法学院', site: 'law.whu.edu.cn', home: 'https://law.whu.edu.cn/' },
+            { name: '文学院', site: 'zw.whu.edu.cn', home: 'https://zw.whu.edu.cn/' },
+            { name: '弘毅学堂', site: 'hyxt.whu.edu.cn', home: 'https://hyxt.whu.edu.cn/' },
+            { name: '化学学院', site: 'chem.whu.edu.cn', home: 'https://chem.whu.edu.cn/' },
+            { name: '水利水电学院', site: 'slsd.whu.edu.cn', home: 'https://slsd.whu.edu.cn/' },
+            { name: '测绘学院', site: 'main.sgg.whu.edu.cn', home: 'https://main.sgg.whu.edu.cn/' },
+            { name: '动力与机械学院', site: 'pmc.whu.edu.cn', home: 'https://pmc.whu.edu.cn/' },
+            { name: '电气与自动化学院', site: 'eea.whu.edu.cn', home: 'https://eea.whu.edu.cn/' },
+            { name: '土木建筑工程学院', site: 'civ.whu.edu.cn', home: 'https://civ.whu.edu.cn/' },
+            { name: '资源与环境科学学院', site: 'sres.whu.edu.cn', home: 'https://sres.whu.edu.cn/' }
+        ];
+
+        function buildBaiduSiteSearch(site, keywords) {
+            return `https://www.baidu.com/s?wd=${encodeURIComponent(`site:${site} ${keywords}`)}`;
+        }
+
+        function renderPolicyOfficial() {
+            const official = document.getElementById('policyOfficialList');
+            if (!official) return;
+            official.innerHTML = POLICY_OFFICIAL.map(i => `
+                <a href="${i.url}" target="_blank"
+                    class="block p-4 rounded-2xl border border-gray-100 bg-gray-50 hover:bg-white hover:shadow-md transition-all">
+                    <div class="text-sm font-black text-gray-800">${i.name}</div>
+                    <div class="mt-1 text-[11px] font-bold text-gray-400 break-all">${i.url}</div>
+                </a>
+            `).join('');
+        }
+
+        function renderPolicyColleges(focusSource) {
+            const colleges = document.getElementById('policyCollegeList');
+            const input = document.getElementById('policySearchInput');
+            const status = document.getElementById('policyStatus');
+            if (!colleges) return;
+
+            const q = input ? input.value.trim().toLowerCase() : '';
+            const base = [...POLICY_COLLEGES].filter(c => {
+                if (!q) return true;
+                return c.name.toLowerCase().includes(q) || c.site.toLowerCase().includes(q);
+            });
+
+            const list = base.sort((a, b) => {
+                if (focusSource && a.name === focusSource) return -1;
+                if (focusSource && b.name === focusSource) return 1;
+                return a.name.localeCompare(b.name, 'zh');
+            });
+
+            colleges.innerHTML = list.map((c, idx) => {
+                const highlight = focusSource && c.name === focusSource;
+                const wrapClass = highlight ? 'border-yellow-200 bg-yellow-50' : 'border-gray-100 bg-gray-50';
+                const titleClass = highlight ? 'text-yellow-900' : 'text-gray-800';
+                return `
+                    <div id="policyRow-${idx}" class="p-4 rounded-2xl border ${wrapClass} hover:bg-white hover:shadow-md transition-all">
+                        <div class="flex items-center gap-2">
+                            <div class="text-sm font-black ${titleClass}">${c.name}</div>
+                            <div class="ml-auto text-[11px] font-bold text-gray-400">${c.site}</div>
+                        </div>
+                        <div class="mt-3 grid grid-cols-1 md:grid-cols-3 gap-2">
+                            <a href="${c.home}" target="_blank" class="chip btn-soft justify-center text-[11px] font-black">
+                                <i class="fas fa-house text-gray-500"></i><span>官网</span>
+                            </a>
+                            <a href="${buildBaiduSiteSearch(c.site, policyKeyword)}" target="_blank"
+                                class="chip btn-soft justify-center text-[11px] font-black">
+                                <i class="fas fa-magnifying-glass text-gray-500"></i><span>站内检索</span>
+                            </a>
+                            <a href="${buildBaiduSiteSearch(c.site, '推免 加分 综测 评定 办法 细则')}" target="_blank"
+                                class="chip btn-soft justify-center text-[11px] font-black">
+                                <i class="fas fa-graduation-cap text-gray-500"></i><span>推免/综测细则</span>
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            if (status) {
+                status.innerText = `显示 ${list.length} / ${POLICY_COLLEGES.length} 个学院  ·  关键词：${policyKeyword}`;
+            }
+        }
+
+        function openPolicyModal(focusSource) {
+            const modal = document.getElementById('policyModal');
+            const colleges = document.getElementById('policyCollegeList');
+            if (!modal || !colleges) return;
+
+            renderPolicyOfficial();
+            renderPolicyColleges(focusSource);
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closePolicy() {
+            const modal = document.getElementById('policyModal');
+            if (!modal) return;
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function openPolicyForSource(sourceName) {
+            openPolicyModal(sourceName);
+        }
+
+        function resetPolicyFilter() {
+            const input = document.getElementById('policySearchInput');
+            if (input) input.value = '';
+            renderPolicyColleges();
+        }
+
+        const SUCCESS_GUIDES = {
+            'IT/计算机': { title: 'IT 竞赛通关策略', timeline: '2-4 个月', stages: [{ name: '准备', detail: '选题并搭建开发环境' }, { name: '开发', detail: '核心功能实现与调试' }], collaboration: '前后端协作/Git 流', tools: 'VS Code, Git, Docker', tips: '计院实验室有历年优秀项目源码，建议去“蹭”学。' },
+            '双创/经管': { title: '双创/经管夺奖秘籍', timeline: '3-6 个月', stages: [{ name: '调研', detail: '市场痛点深度分析' }, { name: '文案', detail: 'BP 撰写与打磨' }], collaboration: '跨学科组队/演讲担当', tools: '飞书, PPT, Canva', tips: '经管院的创业大咖很多，多参加路演演练。' },
+            '数理/基础': { title: '数理基础竞赛指南', timeline: '1-2 个月', stages: [{ name: '刷题', detail: '历年真题分类突破' }, { name: '建模', detail: '算法实现与论文撰写' }], collaboration: '强逻辑配合', tools: 'MATLAB, LaTeX', tips: '数学系图书馆 4 楼有建模专区。' },
+            '综合': { title: '珞珈竞赛通用策略', timeline: '1-3 个月', stages: [{ name: '准备', detail: '组队与调研' }], collaboration: '跨界沟通', tools: '飞书', tips: '关注“青春珞珈”公众号，获取第一手校内通知。' }
+        };
+
+        const ACTIVITY_GUIDES = {
+            '活动/学术': { title: '学术活动参与指南', timeline: '当天-提前 1 周', stages: [{ name: '提前准备', detail: '收藏活动、看主讲人简介与主题关键词' }, { name: '现场参与', detail: '提前到场占位，带笔记或平板记录观点' }, { name: '会后跟进', detail: '整理 3 个要点 + 1 个疑问，尝试邮件/现场请教' }], collaboration: '结伴同行/会后复盘', tools: '备忘录, Notion', tips: '提问越具体越好：用“我做过…遇到…想请教…”开场。' },
+            '活动/文体': { title: '文体活动打卡攻略', timeline: '提前 1-3 天', stages: [{ name: '获取信息', detail: '确认时间地点、是否需要预约/门票' }, { name: '舒适体验', detail: '准备合适服装/装备，留意天气与交通' }, { name: '记录分享', detail: '拍 3 张照片 + 1 段感受，分享给同学/社群' }], collaboration: '朋友组队/社团同行', tools: '日历, 相机', tips: '带上“备用计划”：人多就改去周边展区/其他场次。' },
+            '活动/社团': { title: '社团/志愿参与路线', timeline: '提前 3-7 天', stages: [{ name: '选择方向', detail: '明确你想要：成长、社交、志愿时长或技能' }, { name: '报名沟通', detail: '准备一句自我介绍 + 可投入时间，主动加群' }, { name: '持续参与', detail: '每次活动复盘 1 条收获，形成长期标签' }], collaboration: '固定搭子/小组分工', tools: '飞书/QQ群', tips: '坚持比一次“嗨”更重要：每周固定 1 次参与即可。' },
+            '活动/综合': { title: '校园活动通用攻略', timeline: '提前 1-3 天', stages: [{ name: '确认信息', detail: '时间、地点、主办方、参与方式' }, { name: '准备到位', detail: '带学生证/校园卡，设置日程提醒' }, { name: '参与复盘', detail: '活动后写 5 行总结：内容/感受/结识/下一步' }], collaboration: '约同学一起/活动后复盘', tools: '日历, 备忘录', tips: '把“参加一次”变成“积累一次”：复盘能让活动真正有价值。' }
+        };
+
+        function findItemByLink(link) {
+            return allData.find(i => i.link === link);
+        }
+
+        function showSuccessGuideByLink(link) {
+            try {
+                const item = findItemByLink(link);
+                if (!item) return;
+                const kind = item.type || 'competition';
+                const guide = kind === 'activity'
+                    ? (ACTIVITY_GUIDES[item.category] || ACTIVITY_GUIDES['活动/综合'])
+                    : (SUCCESS_GUIDES[item.category] || SUCCESS_GUIDES['综合']);
+
+                const contentEl = document.getElementById('successModalContent');
+                const modalEl = document.getElementById('successModal');
+                if (!contentEl || !modalEl) {
+                    alert('打开失败：找不到攻略弹窗组件');
+                    return;
+                }
+
+                contentEl.innerHTML = `
+                    <h4 class="text-2xl font-black whu-green mb-2">${guide.title}</h4>
+                    <p class="text-xs text-gray-400 mb-6 tracking-widest uppercase">Target: ${item.title}</p>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-gray-50 p-4 rounded-2xl border border-gray-100">
+                            <div class="text-[10px] text-gray-400 uppercase font-bold mb-1">建议周期</div>
+                            <div class="text-sm font-black text-gray-800">${guide.timeline}</div>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-2xl border border-gray-100">
+                            <div class="text-[10px] text-gray-400 uppercase font-bold mb-1">协作模式</div>
+                            <div class="text-sm font-black text-gray-800">${guide.collaboration}</div>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div>
+                            <h5 class="font-black text-gray-800 mb-3 flex items-center gap-2"><i class="fas fa-tasks text-green-600"></i> 关键阶段</h5>
+                            <div class="space-y-3">
+                                ${guide.stages.map(s => `
+                                    <div class="flex gap-4">
+                                        <div class="w-1.5 h-1.5 rounded-full bg-green-600 mt-1.5 shrink-0"></div>
+                                        <div>
+                                            <div class="text-sm font-bold text-gray-800">${s.name}</div>
+                                            <div class="text-xs text-gray-500">${s.detail}</div>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                        <div class="bg-yellow-50 p-6 rounded-3xl border border-yellow-100 relative overflow-hidden">
+                            <i class="fas fa-lightbulb absolute -right-4 -bottom-4 text-6xl text-yellow-200/50 rotate-12"></i>
+                            <h5 class="font-black text-yellow-800 mb-2 relative z-10">独家贴士</h5>
+                            <p class="text-sm text-yellow-900/80 italic relative z-10">"${guide.tips}"</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <a class="chip btn-soft justify-center text-[12px] font-black" href="${item.link}" target="_blank">
+                                <i class="fas fa-arrow-up-right-from-square text-gray-500"></i><span>打开原文</span>
+                            </a>
+                            <button class="chip btn-soft justify-center text-[12px] font-black" onclick="downloadIcsByLink('${escJsSingleQuote(item.link)}')">
+                                <i class="fas fa-calendar-plus text-gray-500"></i><span>加日程</span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                modalEl.classList.remove('hidden');
+                modalEl.classList.add('flex');
+            } catch (e) {
+                console.error(e);
+                alert('打开攻略失败');
+            }
+        }
+
+        async function loadTeamMsgs() {
+            try {
+                const res = await fetch('/api/messages');
+                const msgs = await res.json();
+                const list = document.getElementById('teammateList');
+                if (msgs.length === 0) {
+                    list.innerHTML = '<div class="text-center py-4 text-gray-400 text-[10px]">暂无动态，快来发布第一个意向吧！</div>';
+                    return;
+                }
+                list.innerHTML = msgs.map(m => `
+                    <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-50 flex flex-col gap-1 text-[10px] animate-fade-in">
+                        <div class="flex justify-between items-center">
+                            <span class="font-black text-blue-600">[${m.major}] ${m.name}</span>
+                            <span class="text-[8px] text-gray-300">${m.time}</span>
+                        </div>
+                        <div class="text-gray-600 leading-relaxed">${m.msg}</div>
+                    </div>
+                `).join('');
+            } catch (e) { console.error(e); }
+        }
+
+        async function postTeamMsg() {
+            const name = document.getElementById('teamName').value.trim();
+            const major = document.getElementById('teamMajor').value.trim();
+            const msg = document.getElementById('teamInput').value.trim();
+            if (!name || !major || !msg) { alert('请填写完整信息'); return; }
+
+            try {
+                const res = await fetch('/api/messages', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, major, msg })
+                });
+                if (res.ok) {
+                    document.getElementById('teamInput').value = '';
+                    loadTeamMsgs();
+                    alert('发布成功！');
+                }
+            } catch (e) { alert('发布失败'); }
+        }
+
+        async function showStats() {
+            try {
+                const res = await fetch('/api/stats');
+                const stats = await res.json();
+
+                const typeMap = {
+                    competition: { label: '竞赛', color: 'bg-yellow-500' },
+                    activity: { label: '校园活动', color: 'bg-teal-600' }
+                };
+                const typeHtml = Object.entries(stats.byType || {})
+                    .sort((a, b) => b[1] - a[1])
+                    .map(([t, count]) => {
+                        const info = typeMap[t] || { label: t, color: 'bg-gray-500' };
+                        const percent = allData.length ? (count / allData.length * 100).toFixed(1) : '0.0';
+                        return `
+                            <div class="bg-gray-50 border border-gray-100 rounded-2xl p-4">
+                                <div class="flex items-center justify-between mb-2">
+                                    <div class="flex items-center gap-2">
+                                        <span class="w-2.5 h-2.5 rounded-full ${info.color}"></span>
+                                        <span class="text-sm font-black text-gray-800">${info.label}</span>
+                                    </div>
+                                    <span class="text-xs font-black text-gray-600">${count} 条</span>
+                                </div>
+                                <div class="w-full h-2 bg-white rounded-full overflow-hidden border border-gray-100">
+                                    <div class="h-full ${info.color}" style="width: ${percent}%"></div>
+                                </div>
+                                <div class="mt-2 text-[10px] text-gray-400 font-bold tracking-widest uppercase">${percent}%</div>
+                            </div>
+                        `;
+                    }).join('');
+
+                const catHtml = Object.entries(stats.byCategory)
+                    .sort((a, b) => b[1] - a[1])
+                    .map(([cat, count]) => {
+                        const percent = (count / allData.length * 100).toFixed(1);
+                        return `
+                            <div class="space-y-1">
+                                <div class="flex justify-between text-[10px] font-bold">
+                                    <span class="text-gray-600">${cat}</span>
+                                    <span class="text-green-700">${count} 项 (${percent}%)</span>
+                                </div>
+                                <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                                    <div class="h-full bg-green-600" style="width: ${percent}%"></div>
+                                </div>
+                            </div>
+                        `;
+                    }).join('');
+
+                const srcHtml = Object.entries(stats.bySource)
+                    .sort((a, b) => b[1] - a[1])
+                    .map(([src, count], idx) => `
+                        <div class="flex items-center gap-3 group">
+                            <span class="w-5 h-5 rounded-full bg-gray-100 text-[10px] flex items-center justify-center font-bold text-gray-400 group-hover:bg-blue-500 group-hover:text-white transition-colors">${idx + 1}</span>
+                            <span class="flex-1 text-xs text-gray-600">${src}</span>
+                            <span class="text-xs font-black text-gray-800">${count}</span>
+                        </div>
+                    `).join('');
+
+                document.getElementById('categoryChart').innerHTML = catHtml;
+                document.getElementById('sourceChart').innerHTML = srcHtml;
+                document.getElementById('typeChart').innerHTML = typeHtml || '<div class="text-xs text-gray-400">暂无统计</div>';
+                document.getElementById('statsModal').classList.remove('hidden');
+                document.getElementById('statsModal').classList.add('flex');
+            } catch (e) { alert('加载统计失败'); }
+        }
+
+        function shareAsCard(index) {
+            const item = allData[index];
+            if (!item) return;
+            shareAsCardByLink(item.link);
+        }
+
+        function shareAsCardByLink(link) {
+            const item = findItemByLink(link);
+            if (!item) return;
+            const kind = item.type || 'competition';
+            document.getElementById('shareTitle').innerText = item.title;
+            document.getElementById('shareCategory').innerText = `${kind === 'activity' ? '校园活动' : '竞赛'} · ${item.category}`;
+            document.getElementById('shareDate').innerText = `发布日期: ${item.date}`;
+            document.getElementById('shareModal').classList.remove('hidden');
+            document.getElementById('shareModal').classList.add('flex');
+            window.currentShareLink = item.link;
+        }
+
+        function copyShareLink() {
+            navigator.clipboard.writeText(window.currentShareLink).then(() => {
+                alert('链接已复制到剪贴板');
+            });
+        }
+
+        function toggleFavorite(link) {
+            let favs = JSON.parse(localStorage.getItem('whu_favs') || '[]');
+            favs = favs.includes(link) ? favs.filter(f => f !== link) : [...favs, link];
+            localStorage.setItem('whu_favs', JSON.stringify(favs));
+            filter();
+        }
+
+        function filter() {
+            const term = searchInput.value.toLowerCase();
+            const activeBtn = document.querySelector('#categoryFilters .sidebar-item.active');
+            const active = activeBtn ? activeBtn.dataset.category : '全部';
+            const effectiveCategory = activeType === 'activity' ? '全部' : active;
+            const favorites = JSON.parse(localStorage.getItem('whu_favs') || '[]');
+            const freshCutoff = new Date();
+            freshCutoff.setDate(freshCutoff.getDate() - 3);
+            const typeLabel = activeType === 'all' ? '全部内容' : (activeType === 'competition' ? '竞赛' : '校园活动');
+            document.getElementById('currentCategoryTitle').innerText = showFavoritesOnly
+                ? (effectiveCategory === '全部' ? `收藏夹 · ${typeLabel}` : `收藏夹 · ${typeLabel} · ${effectiveCategory}`)
+                : (effectiveCategory === '全部' ? typeLabel : `${typeLabel} · ${effectiveCategory}`);
+            const pill = document.getElementById('currentCategoryPill');
+            if (pill) pill.innerText = showFavoritesOnly
+                ? (effectiveCategory === '全部' ? `收藏夹 · ${typeLabel}` : `收藏夹 · ${typeLabel} · ${effectiveCategory}`)
+                : (effectiveCategory === '全部' ? typeLabel : `${typeLabel} · ${effectiveCategory}`);
+            const filtered = allData.filter(item =>
+                (item.title.toLowerCase().includes(term) || item.source.toLowerCase().includes(term)) &&
+                (effectiveCategory === '全部' || item.category === effectiveCategory) &&
+                (activeType === 'all' || (item.type || 'competition') === activeType) &&
+                (!showFavoritesOnly || favorites.includes(item.link)) &&
+                (!showFreshOnly || item.date === '近期' || (!isNaN(new Date(item.date)) && new Date(item.date) >= freshCutoff))
+            );
+            lastFilteredData = filtered;
+            render(filtered);
+        }
+
+        categoryBtns.forEach(btn => btn.addEventListener('click', () => {
+            categoryBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filter();
+        }));
+
+        typeBtns.forEach(btn => btn.addEventListener('click', () => {
+            typeBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeType = btn.dataset.type;
+            if (activeType === 'activity') {
+                const allBtn = document.querySelector('#categoryFilters .sidebar-item[data-category="全部"]');
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                if (allBtn) allBtn.classList.add('active');
+            }
+            filter();
+        }));
+
+        document.getElementById('calendarBtn').addEventListener('click', () => {
+            const data = (lastFilteredData && lastFilteredData.length) ? lastFilteredData : allData;
+            const groups = { '近期': [] };
+            data.forEach(i => {
+                if (i.date === '近期') {
+                    groups['近期'].push(i);
+                    return;
+                }
+                const m = typeof i.date === 'string' ? i.date.substring(0, 7) : '';
+                if (!m || m.length !== 7) return;
+                groups[m] = groups[m] || [];
+                groups[m].push(i);
+            });
+
+            const keys = Object.keys(groups)
+                .filter(k => groups[k] && groups[k].length > 0)
+                .sort((a, b) => {
+                    if (a === '近期') return -1;
+                    if (b === '近期') return 1;
+                    return b.localeCompare(a);
+                });
+
+            const badgeFor = (item) => (item.type === 'activity'
+                ? '<span class="text-[10px] font-black bg-teal-100 text-teal-700 px-2 py-0.5 rounded">活动</span>'
+                : '<span class="text-[10px] font-black bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded">竞赛</span>');
+
+            document.getElementById('calendarContent').innerHTML = keys.map(m => `
+                <div class="relative pl-8 border-l-4 border-blue-50">
+                    <div class="absolute -left-3 top-0 w-5 h-5 rounded-full bg-blue-500 border-4 border-white shadow-lg"></div>
+                    <h4 class="text-xl font-black mb-4 text-gray-800">${m === '近期' ? '近期' : `${m}月`}</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        ${groups[m].slice(0, 12).map(i => `
+                            <div class="bg-gray-50 p-4 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-md transition-all cursor-pointer" onclick="window.open('${i.link}', '_blank')">
+                                <div class="flex items-center gap-2 mb-2">
+                                    ${badgeFor(i)}
+                                    <span class="text-[10px] font-black text-gray-500 bg-white border border-gray-100 px-2 py-0.5 rounded">${i.category}</span>
+                                    <span class="ml-auto text-[10px] font-bold text-gray-400 tracking-widest uppercase">${i.date === '近期' ? 'RECENT' : i.date}</span>
+                                </div>
+                                <div class="text-sm font-black text-gray-800 leading-snug">${i.title}</div>
+                                <div class="mt-2 text-[10px] text-gray-400 font-bold">${i.source}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+            document.getElementById('calendarModal').classList.remove('hidden');
+            document.getElementById('calendarModal').classList.add('flex');
+        });
+
+        function showTeamInteraction() {
+            document.getElementById('teamModal').classList.remove('hidden');
+            document.getElementById('teamModal').classList.add('flex');
+        }
+
+        function createSakura() {
+            const container = document.getElementById('sakuraContainer');
+            const sakura = document.createElement('div');
+            sakura.className = 'sakura';
+            sakura.style.width = sakura.style.height = `${Math.random() * 10 + 5}px`;
+            sakura.style.left = `${Math.random() * 100}vw`;
+            sakura.style.animationDuration = `${Math.random() * 5 + 10}s`;
+            container.appendChild(sakura);
+            setTimeout(() => sakura.remove(), 15000);
+        }
+        setInterval(createSakura, 600);
+
+        document.getElementById('randomBtn').addEventListener('click', () => {
+            const pool = (lastFilteredData && lastFilteredData.length) ? lastFilteredData : allData;
+            const r = pool[Math.floor(Math.random() * pool.length)];
+            const kind = r.type || 'competition';
+            const kindLabel = kind === 'activity' ? '校园活动' : '竞赛';
+            document.getElementById('modalContent').innerHTML = `
+                <div class="bg-gray-50 p-6 rounded-3xl border border-gray-100">
+                    <h4 class="font-black text-xl text-gray-800 mb-2">${r.title}</h4>
+                    <div class="flex gap-2 mb-4">
+                        <span class="text-[10px] bg-teal-100 text-teal-700 px-2 py-0.5 rounded font-black">${kindLabel}</span>
+                        <span class="text-[10px] bg-green-100 text-green-700 px-2 py-0.5 rounded font-bold">${r.category}</span>
+                        <span class="text-[10px] bg-gray-200 text-gray-500 px-2 py-0.5 rounded font-bold">${r.source}</span>
+                    </div>
+                    <p class="text-xs text-gray-400">随机抽取的一条校园信息，去逛一逛，可能就遇到你的下一次成长。</p>
+                </div>
+            `;
+            document.getElementById('modalLink').href = r.link;
+            document.getElementById('modal').classList.remove('hidden');
+            document.getElementById('modal').classList.add('flex');
+        });
+
+        window.onscroll = () => document.getElementById("backToTop").style.display = (document.documentElement.scrollTop > 300) ? "flex" : "none";
+        document.getElementById("backToTop").onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        document.getElementById('guideBtn').onclick = () => { document.getElementById('guideModal').classList.remove('hidden'); document.getElementById('guideModal').classList.add('flex'); };
+        document.getElementById('roadmapBtn').onclick = () => { document.getElementById('roadmapModal').classList.remove('hidden'); document.getElementById('roadmapModal').classList.add('flex'); };
+        document.getElementById('statsBtn').onclick = showStats;
+        document.getElementById('policyBtn').onclick = () => openPolicyModal();
+        document.getElementById('showFavoritesBtn').onclick = () => {
+            showFavoritesOnly = !showFavoritesOnly;
+            filter();
+        };
+        document.getElementById('favQuickToggle').onclick = () => {
+            showFavoritesOnly = !showFavoritesOnly;
+            filter();
+        };
+        document.getElementById('freshQuickToggle').onclick = () => {
+            showFreshOnly = !showFreshOnly;
+            const btn = document.getElementById('freshQuickToggle');
+            if (btn) btn.classList.toggle('bg-white', showFreshOnly);
+            filter();
+        };
+
+        const policyInput = document.getElementById('policySearchInput');
+        if (policyInput) {
+            policyInput.addEventListener('input', () => renderPolicyColleges());
+        }
+
+        document.querySelectorAll('.policy-keyword').forEach(btn => {
+            btn.addEventListener('click', () => {
+                policyKeyword = btn.dataset.keyword || policyKeyword;
+                document.querySelectorAll('.policy-keyword').forEach(b => {
+                    b.classList.remove('bg-white', 'border-yellow-200', 'text-yellow-900');
+                });
+                btn.classList.add('bg-white', 'border-yellow-200', 'text-yellow-900');
+                renderPolicyColleges();
+            });
+        });
+
+        const closeModal = () => document.getElementById('modal').classList.add('hidden');
+        const closeSuccessModal = () => document.getElementById('successModal').classList.add('hidden');
+        const closeGuide = () => document.getElementById('guideModal').classList.add('hidden');
+        const closeCalendar = () => document.getElementById('calendarModal').classList.add('hidden');
+        const closeRoadmap = () => document.getElementById('roadmapModal').classList.add('hidden');
+        const closeTeamModal = () => document.getElementById('teamModal').classList.add('hidden');
+        const closeStats = () => document.getElementById('statsModal').classList.add('hidden');
+        const closeShare = () => document.getElementById('shareModal').classList.add('hidden');
+
+        function moveSelection(delta) {
+            const data = (lastFilteredData && lastFilteredData.length) ? lastFilteredData : allData;
+            if (!data || data.length === 0) return;
+            const currentIndex = data.findIndex(i => i.link === selectedLink);
+            const idx = currentIndex >= 0 ? currentIndex : 0;
+            const next = Math.max(0, Math.min(data.length - 1, idx + delta));
+            selectedLink = data[next].link;
+            const favorites = JSON.parse(localStorage.getItem('whu_favs') || '[]');
+            renderFeed(data, favorites);
+            const activeBtn = feedList ? feedList.querySelector('.feed-item.active') : null;
+            if (activeBtn && typeof activeBtn.scrollIntoView === 'function') {
+                activeBtn.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            const t = e.target;
+            const tag = t && t.tagName ? t.tagName.toLowerCase() : '';
+            if (tag === 'input' || tag === 'textarea' || (t && t.isContentEditable)) return;
+
+            if (e.key === 'j' || e.key === 'ArrowDown') {
+                e.preventDefault();
+                moveSelection(1);
+                return;
+            }
+            if (e.key === 'k' || e.key === 'ArrowUp') {
+                e.preventDefault();
+                moveSelection(-1);
+                return;
+            }
+            if (e.key === 'o' || e.key === 'Enter') {
+                const item = findItemByLink(selectedLink);
+                if (item && item.link) window.open(item.link, '_blank');
+                return;
+            }
+            if (e.key === 'f') {
+                if (selectedLink) toggleFavoriteKeepSelected(selectedLink);
+                return;
+            }
+        });
+
+        searchInput.addEventListener('input', filter);
+        init();
+    </script>
+</body>
+
+</html>
