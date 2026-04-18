@@ -411,6 +411,7 @@ async function fetchFromSource(source) {
 async function runCrawler() {
     console.log(`[${new Date().toLocaleString()}] 开始执行全校范围抓取任务...`);
     let allItems = [];
+    const sourceStatsMap = {};
 
     const concurrency = 5;
     let cursor = 0;
@@ -423,6 +424,20 @@ async function runCrawler() {
             console.log(`正在抓取: ${source.name}...`);
             const sourceData = await fetchFromSource(source);
             allItems.push(...sourceData);
+
+            const key = source.name;
+            if (!sourceStatsMap[key]) {
+                sourceStatsMap[key] = {
+                    source: source.name,
+                    competition: 0,
+                    activity: 0,
+                    total: 0
+                };
+            }
+            const kind = source.kind === 'activity' ? 'activity' : 'competition';
+            sourceStatsMap[key][kind] += sourceData.length;
+            sourceStatsMap[key].total += sourceData.length;
+
             console.log(`${source.name} 抓取到 ${sourceData.length} 条相关信息`);
         }
     }
@@ -438,9 +453,13 @@ async function runCrawler() {
 
     uniqueItems.sort((a, b) => b.date.localeCompare(a.date));
 
+    const sourceStats = Object.values(sourceStatsMap)
+        .sort((a, b) => b.total - a.total);
+
     const output = {
         lastUpdate: new Date().toLocaleString(),
         count: uniqueItems.length,
+        sourceStats,
         data: uniqueItems
     };
 
